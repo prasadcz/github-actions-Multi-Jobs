@@ -38,8 +38,11 @@ jobs:
     needs: build
     
     steps:
-    - name: Build & push Docker image
+    - name: listing
+      run: ls-la 
     
+    - name: Build & push Docker image
+   
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: cloudzenix/cz-springboot-welcome
