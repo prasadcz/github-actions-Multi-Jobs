@@ -39,7 +39,9 @@ jobs:
     
     steps:
     - name: listing
-      run: ls-la 
+      run: ls -la
+    - name: listing
+      run: pwd
     
     - name: Build & push Docker image
    
