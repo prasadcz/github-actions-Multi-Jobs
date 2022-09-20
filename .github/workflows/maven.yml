@@ -39,8 +39,12 @@ jobs:
     
     steps:
     - uses: actions/checkout@v2
-    - name: listing
-      run: ls -la
+    - name: download artifact
+      uses: actions/download-artifact@v3
+      with:
+        name: static-site
+    - name: test artifact download  
+      run: ls -R
     - name: listing
       run: pwd
     
