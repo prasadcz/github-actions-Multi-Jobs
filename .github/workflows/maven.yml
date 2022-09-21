@@ -23,14 +23,16 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build with Maven
-      run: mvn clean install
-   # - name: Download a Build Artifact
-   #   uses: actions/download-artifact@v3.0.0
-   #   with:
-        # Artifact name
-   #     name: artifact.txt
-        # Destination path  
-  #      path: artifact.txt
+      run: |
+           mvn -B package --file pom.xml
+           mkdir artifacts && cp target/*.jar artifacts
+           cd artifacts && ls
+    - name: Save artifact 
+      uses: actions/upload-artifact@v2
+      with:
+        name: github-actions-artifact
+        path: artifacts
+   
       
   push-docker-image:
   
