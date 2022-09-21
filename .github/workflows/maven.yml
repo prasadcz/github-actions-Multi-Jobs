@@ -61,7 +61,9 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }} 
         password: ${{ secrets.DOCKER_PASSWORD }}
     
-    - name: push docker images
-      run: |
-           docker pull cloudzenix/cz-springboot-welcome
-           docker run -p 8080:8080 cloudzenix/cz-springboot-welcome
+   # - name: push docker images
+   #   run: |
+   #        docker pull cloudzenix/cz-springboot-welcome
+   #        docker run -p 8080:8080 cloudzenix/cz-springboot-welcome
+
+     
