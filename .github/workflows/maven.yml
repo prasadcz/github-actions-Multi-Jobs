@@ -29,7 +29,7 @@ jobs:
    #   with:
         # Artifact name
    #     name: artifact.txt
-        # Destination path 
+        # Destination path  
   #      path: artifact.txt
       
   push-docker-image:
