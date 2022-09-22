@@ -33,10 +33,10 @@ jobs:
         name: github-actions-artifact
         path: artifacts
   
-  docker-image-to-Jfrog:
+#  docker-image-to-Jfrog:
   
-    runs-on: self-hosted
-    steps:
+#    runs-on: self-hosted
+#    steps:
     - name: Build & push Docker image to JFrog-Artifact repo
       run: |
         docker login -urenuka.prasad@cloudzenix.com -p Prasad@123 cloudzenix.jfrog.io
