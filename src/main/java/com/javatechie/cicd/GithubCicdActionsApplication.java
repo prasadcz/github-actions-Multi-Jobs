@@ -11,7 +11,7 @@ public class GithubCicdActionsApplication {
 
 	@GetMapping("/welcome")
 	public String welcome(){
-		return "Hello CloudZenix.!  Good Morning everyone..!";
+		return "Hello CloudZenix.!  This is springboot application..!";
 	}
 
 //	echo "# github-actions-example" >> README.md
