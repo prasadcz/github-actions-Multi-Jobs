@@ -12,7 +12,7 @@ on:
 jobs:
   build: 
   
-    runs-on: self-hosted 
+    runs-on: ubuntu-latest 
 
     steps:
     - uses: actions/checkout@v2
@@ -32,6 +32,9 @@ jobs:
       with:
         name: github-actions-artifact
         path: artifacts
+        
+    - name: uploading artifact
+      run: jf rt upload cz-springboot-welcome.jar maven-demo/ --url=cloudzenix.jfrog.io --user=renuka.prasad@cloudzenix.com --password=Prasad@123
   
 #  docker-image-to-Jfrog:
   
