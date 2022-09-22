@@ -33,6 +33,9 @@ jobs:
         name: github-actions-artifact
         path: artifacts
         
+    - name: setting up Jfrog-CLI
+      uses: jfrog/setup-jfrog-cli@v2
+      #run: jf --version
     - name: uploading artifact
       run: jf rt upload cz-springboot-welcome.jar maven-demo/ --url=cloudzenix.jfrog.io --user=renuka.prasad@cloudzenix.com --password=Prasad@123
   
