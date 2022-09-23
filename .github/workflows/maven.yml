@@ -37,7 +37,8 @@ jobs:
       uses: jfrog/setup-jfrog-cli@v2
       #run: jf --version
     - name: uploading artifact
-      run: jf rt upload artifacts/cz-springboot-welcome.jar maven-demo --url=cloudzenix.jfrog.io --user=renuka.prasad@cloudzenix.com --password=Prasad@123
+      run: jf rt upload artifacts/cz-springboot-welcome.jar maven-demo --url=https://cloudzenix.jfrog.io/artifactory/ --user=renuka.prasad@cloudzenix.com --password=Prasad@123
+      #run: jf rt upload artifacts/cz-springboot-welcome.jar maven-demo --url=cloudzenix.jfrog.io --user=renuka.prasad@cloudzenix.com --password=Prasad@123
   
 #  docker-image-to-Jfrog:
   
