@@ -33,10 +33,10 @@ jobs:
         name: Saving the artifact
         path: artifacts
         
-    - name: Step:5 Setting up Jfrog-CLI
+    - name: Step:4 Setting up Jfrog-CLI
       uses: jfrog/setup-jfrog-cli@v2
       #run: jf --version
-    - name: Step:6 Pushing the maven artifact to Jfrog repository
+    - name: Step:5 Pushing the maven artifact to Jfrog repository
       run: jf rt upload artifacts/cz-springboot-welcome.jar maven-demo --url=https://cloudzenix.jfrog.io/artifactory/ --user=renuka.prasad@cloudzenix.com --password=Prasad@123
       #run: jf rt upload artifacts/cz-springboot-welcome.jar maven-demo --url=cloudzenix.jfrog.io --user=renuka.prasad@cloudzenix.com --password=Prasad@123
   
@@ -44,7 +44,7 @@ jobs:
   
 #    runs-on: self-hosted
 #    steps:
-    - name: Step:7 Build & Push Docker image to JFrog-Artifact repo
+    - name: Step:6 Build & Push Docker image to JFrog-Artifact repo
       run: |
         docker login -urenuka.prasad@cloudzenix.com -p Prasad@123 cloudzenix.jfrog.io
         docker build -t cloudzenix.jfrog.io/docker-repo/cz-springboot-welcome:latest1 .
@@ -52,7 +52,7 @@ jobs:
 #        docker build -t ${{ secrets.DOCKER_USERNAME }}/cz-springboot-welcome:latest .
 #        docker push ${{ secrets.DOCKER_USERNAME }}/cz-springboot-welcome:latest
    
-    - name: Step:8 Build & push Docker image to Docker-Hub          
+    - name: Step:7 Build & push Docker image to Docker-Hub          
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: cloudzenix/cz-springboot-welcome
