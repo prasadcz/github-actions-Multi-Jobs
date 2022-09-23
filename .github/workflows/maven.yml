@@ -16,27 +16,27 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
+    - name: Step:1 Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
         java-version: '1.8'
         distribution: 'adopt'
         cache: maven
-    - name: Build with Maven
+    - name: Step:2 Build source code into jar file with Maven
       run: |
            mvn -B package --file pom.xml
            mkdir artifacts && cp target/*.jar artifacts
            cd artifacts && ls
-    - name: Save artifact 
+    - name: Step:3 Saving the artifact 
       uses: actions/upload-artifact@v2
       with:
-        name: github-actions-artifact
+        name: Step:4 Saving the artifact
         path: artifacts
         
-    - name: setting up Jfrog-CLI
+    - name: Step:5 Setting up Jfrog-CLI
       uses: jfrog/setup-jfrog-cli@v2
       #run: jf --version
-    - name: uploading artifact
+    - name: Step:6 Pushing the maven artifact to Jfrog repository
       run: jf rt upload artifacts/cz-springboot-welcome.jar maven-demo --url=https://cloudzenix.jfrog.io/artifactory/ --user=renuka.prasad@cloudzenix.com --password=Prasad@123
       #run: jf rt upload artifacts/cz-springboot-welcome.jar maven-demo --url=cloudzenix.jfrog.io --user=renuka.prasad@cloudzenix.com --password=Prasad@123
   
@@ -44,7 +44,7 @@ jobs:
   
 #    runs-on: self-hosted
 #    steps:
-    - name: Build & push Docker image to JFrog-Artifact repo
+    - name: Step:7 Build & Push Docker image to JFrog-Artifact repo
       run: |
         docker login -urenuka.prasad@cloudzenix.com -p Prasad@123 cloudzenix.jfrog.io
         docker build -t cloudzenix.jfrog.io/docker-repo/cz-springboot-welcome:latest1 .
@@ -52,7 +52,7 @@ jobs:
 #        docker build -t ${{ secrets.DOCKER_USERNAME }}/cz-springboot-welcome:latest .
 #        docker push ${{ secrets.DOCKER_USERNAME }}/cz-springboot-welcome:latest
    
-    - name: Build & push Docker image to Docker-Hub          
+    - name: Step:8 Build & push Docker image to Docker-Hub          
       uses: mr-smithers-excellent/docker-build-push@v5
       with:
         image: cloudzenix/cz-springboot-welcome
