@@ -10,73 +10,97 @@ on:
     branches: [ master ]
 
 jobs:
-  build: 
+  build-code: 
   
     runs-on: ubuntu-latest 
 
     steps:
     - uses: actions/checkout@v2
-    - name: Step:1 Set up JDK 1.8
+    - name: Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
         java-version: '1.8'
         distribution: 'adopt'
         cache: maven
-    - name: Step:2 Build source code into jar file with Maven
+    - name: Build source code into jar file with Maven
       run: |
            mvn -B package --file pom.xml
            mkdir artifacts && cp target/*.jar artifacts
            cd artifacts && ls
-    - name: Step:3 Saving the artifact 
+    - name: Saving the artifact 
       uses: actions/upload-artifact@v2
       with:
-        name: Spring the artifact
+        name: Springboot artifact
         path: artifacts
         
-  artifact-use-build:
-    name: Re-use Artifact
+  Pushing-Artifact-to-Jfrog_Repo:
+    name: Pushing-Artifact-to-Jfrog_Repo
     runs-on: ubuntu-latest
-    needs: [build]
+    needs: [build-code]
 
     steps:
       - uses: actions/checkout@v2
-     # - uses: actions/setup-node@v1
-     #   with:
-     #     node-version: 12
       - uses: actions/download-artifact@v2
         with:
-          name: Spring the artifact
-      - run: ls
-  
-        
-      - name: Step:4 Setting up Jfrog-CLI
+          name: Springboot artifact
+    #  - run: ls
+          
+      - name: Setting up Jfrog-CLI
         uses: jfrog/setup-jfrog-cli@v2
       #run: jf --version
-      - name: Step:5 Pushing the maven artifact to Jfrog repository
+      - name: Pushing the built artifact to Jfrog repository
         run: jf rt upload cz-springboot-welcome.jar maven-demo --url=https://cloudzenix.jfrog.io/artifactory/ --user=renuka.prasad@cloudzenix.com --password=Prasad@123
       #run: jf rt upload artifacts/cz-springboot-welcome.jar maven-demo --url=cloudzenix.jfrog.io --user=renuka.prasad@cloudzenix.com --password=Prasad@123
   
-#  docker-image-to-Jfrog:
+  Build-Docker_image_and_Push_to_Jfrog: 
   
-#    runs-on: self-hosted
-#    steps:
-      - name: Step:6 Build & Push Docker image to JFrog-Artifact repo
-        run: |
-          docker login -urenuka.prasad@cloudzenix.com -p Prasad@123 cloudzenix.jfrog.io
-          docker build -t cloudzenix.jfrog.io/docker-repo/cz-springboot-welcome:latest1 .
-          docker push cloudzenix.jfrog.io/docker-repo/cz-springboot-welcome:latest1
-#        docker build -t ${{ secrets.DOCKER_USERNAME }}/cz-springboot-welcome:latest .
-#        docker push ${{ secrets.DOCKER_USERNAME }}/cz-springboot-welcome:latest
-   
-      - name: Step:7 Build & push Docker image to Docker-Hub          
-        uses: mr-smithers-excellent/docker-build-push@v5
-        with:
-          image: cloudzenix/cz-springboot-welcome
-          tags: today
-          registry: docker.io
-          dockerfile: Dockerfile
-          username: ${{ secrets.DOCKER_USERNAME }} 
-          password: ${{ secrets.DOCKER_PASSWORD }}
+    runs-on: ubuntu-latest
+    needs: [Pushing-Artifact-to-Jfrog_Repo]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '1.8'
+        distribution: 'adopt'
+        cache: maven
+    - name: Build source code into jar file with Maven
+      run: |
+           mvn -B package --file pom.xml         
+
+    - name: Build & Push Docker image to JFrog-Artifact repo
+      run: |
+        docker login -urenuka.prasad@cloudzenix.com -p Prasad@123 cloudzenix.jfrog.io
+        docker build -t cloudzenix.jfrog.io/docker-repo/cz-springboot-welcome:latest1 .
+        docker push cloudzenix.jfrog.io/docker-repo/cz-springboot-welcome:latest1
+
+  Build-Docker_image_and_Push_to_DockerHub: 
+  
+    runs-on: ubuntu-latest
+    needs: [Build-Docker_image_and_Push_to_Jfrog]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v1
+      with:
+        java-version: '1.8'
+        distribution: 'adopt'
+        cache: maven
+    - name: Build source code into jar file with Maven
+      run: |
+           mvn -B package --file pom.xml         
+
+    - name: Build & push Docker image to Docker-Hub          
+      uses: mr-smithers-excellent/docker-build-push@v5
+      with:
+        image: cloudzenix/cz-springboot-welcome
+        tags: today
+        registry: docker.io
+        dockerfile: Dockerfile
+        username: ${{ secrets.DOCKER_USERNAME }} 
+        password: ${{ secrets.DOCKER_PASSWORD }}
     
 
 
