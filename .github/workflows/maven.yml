@@ -49,59 +49,9 @@ jobs:
         uses: jfrog/setup-jfrog-cli@v2
       #run: jf --version
       - name: Pushing the built artifact to Jfrog repository
-        run: jf rt upload cz-springboot-welcome.jar maven-demo --url=https://cloudzenix.jfrog.io/artifactory/ --user=renuka.prasad@cloudzenix.com --password=Prasad@123
+        run: jf rt upload cz-springboot-welcome.jar maven-build --url=https://cjf.jfrog.io/artifactory/ --user=ckreddy459@gmail.com --password=Dev$3Ops2022
       #run: jf rt upload artifacts/cz-springboot-welcome.jar maven-demo --url=cloudzenix.jfrog.io --user=renuka.prasad@cloudzenix.com --password=Prasad@123
   
-  Build-Docker_image_and_Push_to_Jfrog: 
-  
-    runs-on: ubuntu-latest
-    needs: [Pushing-Artifact-to-Jfrog_Repo]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: '1.8'
-        distribution: 'adopt'
-        cache: maven
-    - name: Build source code into jar file with Maven
-      run: |
-           mvn -B package --file pom.xml         
-
-    - name: Build & Push Docker image to JFrog-Artifact repo
-      run: |
-        docker login -urenuka.prasad@cloudzenix.com -p Prasad@123 cloudzenix.jfrog.io
-        docker build -t cloudzenix.jfrog.io/docker-repo/cz-springboot-welcome:latest1 .
-        docker push cloudzenix.jfrog.io/docker-repo/cz-springboot-welcome:latest1
-
-  Build-Docker_image_and_Push_to_DockerHub: 
-  
-    runs-on: ubuntu-latest
-    needs: [Build-Docker_image_and_Push_to_Jfrog]
-
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 1.8
-      uses: actions/setup-java@v1
-      with:
-        java-version: '1.8'
-        distribution: 'adopt'
-        cache: maven
-    - name: Build source code into jar file with Maven
-      run: |
-           mvn -B package --file pom.xml         
-
-    - name: Build & push Docker image to Docker-Hub          
-      uses: mr-smithers-excellent/docker-build-push@v5
-      with:
-        image: cloudzenix/cz-springboot-welcome
-        tags: today
-        registry: docker.io
-        dockerfile: Dockerfile
-        username: ${{ secrets.DOCKER_USERNAME }} 
-        password: ${{ secrets.DOCKER_PASSWORD }}
-    
-
+ 
 
      
