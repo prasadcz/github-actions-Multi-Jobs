@@ -16,7 +16,7 @@ jobs:
       with:
         java-version: '11'
     - name: Analyze with SonarCloud
-      run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=cloudzenix-anand_github-actions-example -Dsonar.organization=cloudzenix-anand -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+      run: mvnw -B verify sonar:sonar -Dsonar.projectKey=cloudzenix-anand_github-actions-example -Dsonar.organization=cloudzenix-anand -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
