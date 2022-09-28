@@ -1,26 +1,26 @@
 name: project cicd flow
 
 on:
+  # Trigger analysis when pushing in master or pull requests, and when creating
+  # a pull request.
   push:
-    branches: [ master ]
+    branches:
+      - master
   pull_request:
-    branches: [ master ]
-
+      types: [opened, synchronize, reopened]
 jobs:
-   sonar-scan:
+  sonarcloud:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: Set up JDK
-      uses: actions/setup-java@v1
+    - uses: actions/checkout@v2
       with:
-        java-version: '11'
-    - name: Analyze with SonarCloud
-      run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=cloudzenix-anand_github-actions-example -Dsonar.organization=cloudzenix-anand -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
+        # Disabling shallow clone is recommended for improving relevancy of reporting
+        fetch-depth: 0
+    - name: SonarCloud Scan
+      uses: sonarsource/sonarcloud-github-action@master
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-#  sonarcloud:
 #    runs-on: ubuntu-latest
 #    steps:
 #    - name: clone repository
