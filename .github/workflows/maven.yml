@@ -10,16 +10,29 @@ on:
     branches: [ master ]
 
 jobs:
-  sonarcloud:
-    runs-on: ubuntu-latest
+   sonar-scan:
+    runs-on: ubuntu-16.04
     steps:
-    - name: clone repository
-      uses: actions/checkout@v2
-    - name: Analyse with sonarcloud
-      uses: sonarsource/sonarcloud-github-action@v1.3
+    - uses: actions/checkout@v1
+    - name: Set up JDK
+      uses: actions/setup-java@v1
+      with:
+        java-version: '11'
+    - name: Analyze with SonarCloud
+      run: ./mvnw -B verify sonar:sonar -Dsonar.projectKey=cloudzenix-anand_github-actions-example -Dsonar.organization=cloudzenix-anand -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=$SONAR_TOKEN
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+#  sonarcloud:
+#    runs-on: ubuntu-latest
+#    steps:
+#    - name: clone repository
+#      uses: actions/checkout@v2
+#    - name: Analyse with sonarcloud
+#      uses: sonarsource/sonarcloud-github-action@v1.3
+#      env:
+#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   
   build:
   
