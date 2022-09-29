@@ -1,1 +1,2 @@
-
+echo " anand"
+echo :date
