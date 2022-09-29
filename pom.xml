@@ -28,7 +28,7 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
-
+	
 	<build>
 		<plugins>
 			<plugin>
@@ -38,5 +38,9 @@
 		</plugins>
 		<finalName>cz-springboot-welcome</finalName>
 	</build>
+	<properties>
+          <sonar.organization>cloudzenix-anand</sonar.organization>
+          <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+        </properties>
 
 </project>
