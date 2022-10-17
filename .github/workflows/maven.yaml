@@ -47,8 +47,12 @@ jobs:
           
       - name: Setting up Jfrog-CLI
         uses: jfrog/setup-jfrog-cli@v2
+      - name: Generate build number
+        uses: einaregilsson/build-number@v3
+        with:
+          token: ${{secrets.github_token}}
       #run: jf --version
       - name: Pushing the built artifact to Jfrog repository
         run: |
              jf rt upload cz-springboot-welcome.jar maven-demo --url=https://cloudzenix.jfrog.io/artifactory/ --user=renuka.prasad@cloudzenix.com --password=Prasad@123
-             jf rt bp
+             jf rt build-publish gitaction --buildname=$BUILD_NUMBER
