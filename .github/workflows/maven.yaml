@@ -52,8 +52,7 @@ jobs:
         run: |
              #docker login -urenuka.prasad@cloudzenix.com -p Prasad@123 cloudzenix.jfrog.io
              #jf rt upload cz-springboot-welcome.jar maven-demo --url=cloudzenix.jfrog.io --user=renuka.prasad@cloudzenix.com --password=Prasad@123
-             #c
-             docker login -uckreddy459@gmail.com -p Dev$3Ops2022 cjf.jfrog.io
+             #docker login -uckreddy459@gmail.com -p Dev$3Ops2022 cjf.jfrog.io
              jf rt upload cz-springboot-welcome.jar maven-build --url=https://cjf.jfrog.io/artifactory/ --user=ckreddy459@gmail.com --password=Dev$3Ops2022
              jf rt bp
      
