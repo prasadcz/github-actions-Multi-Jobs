@@ -1,10 +1,10 @@
-name: "Frogbot Scan Pull Request" 
+name: "Frogbot Scan Pull Request"
 on:
-  push:
-    branches: [ master ] 
-  pull_request:
-    branches: [ master ]
-
+  pull_request_target:
+    types: [opened, synchronize]
+permissions:
+  pull-requests: write
+  contents: read
 jobs:
   scan-pull-request:
     runs-on: ubuntu-latest
@@ -28,7 +28,6 @@ jobs:
           # [Mandatory]
           # JFrog platform URL (This functionality requires version 3.29.0 or above of Xray)
           JF_URL: https://cloudzenix.jfrog.io
-
           # [Mandatory if JF_ACCESS_TOKEN is not provided]
           # JFrog username with 'read' permissions for Xray. Must be provided with JF_PASSWORD
           JF_USER: renuka.prasad@cloudzenix.com
@@ -36,6 +35,7 @@ jobs:
           # [Mandatory if JF_ACCESS_TOKEN is not provided]
           # JFrog password. Must be provided with JF_USER
           JF_PASSWORD: Prasad@123
+
 
           # [Mandatory]
           # The GitHub token automatically generated for the job
