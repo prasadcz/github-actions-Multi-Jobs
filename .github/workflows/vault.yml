@@ -17,7 +17,7 @@ jobs:
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: |
-                    secrets/kv/kv accesskey | AWS_ACCESS_KEY_ID ;
-                    secret/kv/kv secretkey | AWS_SECRET_ACCESS_KEY ;
+                    /kv/kv accesskey | AWS_ACCESS_KEY_ID ;
+                    /kv/kv secretkey | AWS_SECRET_ACCESS_KEY ;
                     
             # ...
