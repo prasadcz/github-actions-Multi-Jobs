@@ -21,6 +21,6 @@ jobs:
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY ;
                 run:
                     echo "${{ secrets.VAULT_CA_CERT }}"
-                    echo "${{ secrets.AWS_SECRET_KEY_ID }}"
+                    echo "${{ secrets.secretkey }}"
              # ...        
      
