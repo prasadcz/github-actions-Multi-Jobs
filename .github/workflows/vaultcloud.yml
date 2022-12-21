@@ -13,9 +13,9 @@ jobs:
                uses: hashicorp/vault-action@v2
                with:
                 url: https://vault-cluster-key-public-vault-2d7b4bd8.54f693ad.z1.hashicorp.cloud:8200
-                caCertificate: ${{ secrets.VAULT_CA_KEY}}
                 #method: token
                 token: ${{ secrets.VAULT_TOKEN_KEY}}
+                caCertificate: ${{ secrets.VAULT_CA_KEY}}
                 #namespace: admin
                 secrets: |
                   /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
