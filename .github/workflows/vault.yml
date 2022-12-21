@@ -17,8 +17,8 @@ jobs:
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: |
-                    /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
-                    /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY ;
+                    /cubbyhole/foo accesskey > AWS_ACCESS_KEY_ID ;
+                    /cubbyhole/foo secretkey > AWS_SECRET_ACCESS_KEY ;
                 run: |
                     echo  ${AWS_ACCESS_KEY_ID }
                     echo ${AWS_SECRET_KEY_ID }
