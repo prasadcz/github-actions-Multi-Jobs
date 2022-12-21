@@ -1,0 +1,23 @@
+name: vault1
+
+on:
+  push:
+    branches: [ master ] 
+    
+jobs:
+    build:
+         runs-on: ubuntu-latest 
+steps:
+    # ...
+    - name: Import Secrets
+      uses: hashicorp/vault-action
+      with:
+        url: https://vault-cluster-public-vault-f61b6492.7a17ab81.z1.hashicorp.cloud:8200/
+        caCertificate: ${{ secrets.VAULT2}}
+        method: token
+        token: ${{ secrets.VAULT1}}
+        namespace: admin
+        secrets: |
+            /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
+            /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY ;
+         
