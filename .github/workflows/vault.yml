@@ -19,8 +19,8 @@ jobs:
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY ;
-                run: |
-                    echo  ${AWS_ACCESS_KEY_ID }
-                    echo ${AWS_SECRET_KEY_ID }
+                run: echo "$AWS_ACCESS_KEY_ID"
+                
+
              # ...        
      
