@@ -13,11 +13,11 @@ jobs:
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
               with:
-                url: https://vault-cluster-public-vault-f61b6492.7a17ab81.z1.hashicorp.cloud:8200/
+                url: http://54.89.147.158:8200
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: |
-                    secret/data/ci/kv accessKey | AWS_ACCESS_KEY_ID ;
-                    secret/data/ci/kv secretKey | AWS_SECRET_ACCESS_KEY ;
+                    secret/data/ci/kv accesskey | AWS_ACCESS_KEY_ID ;
+                    secret/data/ci/kv secretkey | AWS_SECRET_ACCESS_KEY ;
                     
             # ...
