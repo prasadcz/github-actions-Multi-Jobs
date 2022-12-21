@@ -12,7 +12,7 @@ jobs:
              - name: Import Secrets
                uses: hashicorp/vault-action@v2
                with:
-                url: https://vault-cluster-public-vault-f61b6492.7a17ab81.z1.hashicorp.cloud:8200/
+                url: https://vault-cluster-public-vault-f61b6492.7a17ab81.z1.hashicorp.cloud:8200
                 caCertificate: ${{ secrets.VAULT2}}
                 method: token
                 token: ${{ secrets.VAULT1}}
