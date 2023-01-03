@@ -9,18 +9,21 @@ jobs:
     build:
          runs-on: ubuntu-latest 
          steps:
-            # ...
+          
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
               with:
-                url: http://54.89.147.158:8200
+                url: http://3.90.213.1:8200
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY ;
-                run: echo "$AWS_ACCESS_KEY_ID"
+            - name: Import Secrets1
+              id: secrets
+            - name: Sensitive Operation
+              run: "my-cli --token '${{ steps.secrets.outputs.AWS_ACCESS_KEY_ID }}'"
                 
 
-             # ...        
+              
      
