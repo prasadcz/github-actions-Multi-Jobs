@@ -19,10 +19,8 @@ jobs:
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY ;
-            - name: Import Secrets1
-              id: secrets
-            - name: Sensitive Operation
-              run: "my-cli --token '${{ steps.secrets.outputs.AWS_ACCESS_KEY_ID }}'"
+                id: secrets
+                run: "my-cli --token '${{ steps.secrets.outputs.AWS_ACCESS_KEY_ID }}'"
                 
 
               
