@@ -18,10 +18,13 @@ jobs:
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
-                    /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY ;
-                run: |
-                    echo "foo=bar" >> "$GITHUB_ENV"
-                    echo "$foo"
+                    /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
+              env:
+                 Greeting: AWS_SECRET_ACCESS_KEY
+              run: echo "$Greeting"
+                
+
+               
                 
 
               
