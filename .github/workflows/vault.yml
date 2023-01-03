@@ -19,8 +19,9 @@ jobs:
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY ;
-                id: secrets
-                run: "my-cli --token '${{ steps.secrets.outputs.AWS_ACCESS_KEY_ID }}'"
+                run: |
+                    echo "foo=bar" >> "$GITHUB_ENV"
+                    echo "$foo"
                 
 
               
