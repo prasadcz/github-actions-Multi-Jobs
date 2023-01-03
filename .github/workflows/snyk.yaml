@@ -1,5 +1,10 @@
 name: Example workflow using Snyk
-on: push
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    types: [opened, synchronize, reopened]
 jobs:
   security:
     runs-on: ubuntu-latest
