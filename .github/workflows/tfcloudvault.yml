@@ -14,8 +14,10 @@ jobs:
               uses: hashicorp/vault-action@v2
               with:
                 url: https://vault-cluster-public-vault-9bc72c0a.954833d8.z1.hashicorp.cloud:8200/
-                token: ${{ secrets.TFCVAULT }}
                 caCertificate: ${{ secrets.TFC_VAULT_CA }}
+                method: token
+                token: ${{ secrets.TFCVAULT }}
+                namespace: admin
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
