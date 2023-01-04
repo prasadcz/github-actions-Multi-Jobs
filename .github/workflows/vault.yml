@@ -33,7 +33,7 @@ jobs:
                 rootdir: ""    # defaults to "PWD"
                 workdir: ""    # defaults to "PWD/unfor19-awscli"
                 run: |
-                   aws -version
+                     aws -version
     #env:
                #  Greeting: AWS_SECRET_ACCESS_KEY
                  
