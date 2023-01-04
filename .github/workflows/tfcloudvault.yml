@@ -1,0 +1,30 @@
+name: vault
+
+on:
+  push:
+    branches: [ master ] 
+
+
+jobs:
+    build:
+         runs-on: ubuntu-latest 
+         steps:
+          
+            - name: Import Secrets
+              uses: hashicorp/vault-action@v2
+              with:
+                url: https://vault-cluster-public-vault-9bc72c0a.954833d8.z1.hashicorp.cloud:8200/
+                token: ${{ secrets.TFCVAULT }}
+                caCertificate: ${{ secrets.TFC_VAULT_CA }}
+                secrets: |
+                    /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
+                    /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
+            - name: Unit Test
+              run: |
+                  mkdir -p ~/.aws
+                  touch ~/.aws/credentials
+                  echo "[default]
+                  aws_access_key_id = ${{ env.AWS_ACCESS_KEY_ID }} 
+                  aws_secret_access_key = ${{ env.AWS_SECRET_ACCESS_KEY }}
+                  region = us-east-1"
+                  aws --version 
