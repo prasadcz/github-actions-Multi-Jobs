@@ -21,19 +21,33 @@ jobs:
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
     
     builds:
-         runs-on: ubuntu-latest 
-         steps:
+         runs-on: ubuntu-latest
+         steps: 
+            - name: Unit Test
+              run: |
+                  mkdir -p ~/.aws
+                  touch ~/.aws/credentials
+
+                  echo "[default]
+                  aws_access_key_id = ${{ AWS_ACCESS_KEY_ID }}
+                  aws_secret_access_key = ${{ AWS_SECRET_ACCESS_KEY  }}
+                  region = us-east-1
+                  aws --version
+                  
+        
+        
+        #steps:
           
-            - id: install-aws-cli
-              uses: unfor19/install-aws-cli-action@v1
-              with:
-                version: 2     # default
-                verbose: false # default
-                arch: amd64    # allowed values: amd64, arm64
-                rootdir: "PWD"    # defaults to "PWD"
-                workdir: "PWD/unfor19-awscli"    # defaults to "PWD/unfor19-awscli"
-                run: |
-                     /usr/local/bin/aws --version
+          #  - id: install-aws-cli
+          #    uses: unfor19/install-aws-cli-action@v1
+          #    with:
+          #      version: 2     # default
+          #      verbose: false # default
+          #      arch: amd64    # allowed values: amd64, arm64
+          #      rootdir: "PWD"    # defaults to "PWD"
+           #     workdir: "PWD/unfor19-awscli"    # defaults to "PWD/unfor19-awscli"
+            #    run: |
+            #         /usr/local/bin/aws --version
      #env:
                #  Greeting: AWS_SECRET_ACCESS_KEY
                  
