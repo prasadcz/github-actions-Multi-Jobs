@@ -16,7 +16,7 @@ jobs:
                 method: token
                 token: ${{ secrets.VAULT_TOKEN_KEY}}
                 caCertificate: ${{ secrets.VAULT_CA_KEY}}
-                namespace: admin
+                namespace: admin/tfc
                 secrets: |
                   /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                   /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY ;
