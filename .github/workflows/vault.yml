@@ -19,14 +19,14 @@ jobs:
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
-              env:
-                 Greeting: AWS_SECRET_ACCESS_KEY
+              #env:
+               #  Greeting: AWS_SECRET_ACCESS_KEY
                  
-    build1:
-            runs-on: ubuntu-latest 
-            steps:
-             - name: "Say Hello Mona it's Monday"
-               run: echo "$Greeting First_Name. Today is DAY_OF_WEEK!"
+    #build1:
+     #       runs-on: ubuntu-latest 
+     #       steps:
+     #        - name: "Say Hello Mona it's Monday"
+     #          run: echo "$Greeting First_Name. Today is DAY_OF_WEEK!"
                 
 
                
