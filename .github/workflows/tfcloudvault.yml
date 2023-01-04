@@ -21,6 +21,7 @@ jobs:
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
+                    /cubbyhole/foo npm_token
             - name: Unit Test
               run: |
                   mkdir -p ~/.aws
