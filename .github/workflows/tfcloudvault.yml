@@ -1,4 +1,4 @@
-name: vault
+name: tfcvault
 
 on:
   push:
