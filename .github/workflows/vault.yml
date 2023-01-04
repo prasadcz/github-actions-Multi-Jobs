@@ -19,7 +19,17 @@ jobs:
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
-              #env:
+    
+    builds:
+         runs-on: ubuntu-latest 
+         steps:
+          
+            - name: AWS Login
+              uses: amazon/aws-cli@latest
+            - name: aws configure
+              run: |
+                   aws -version
+    #env:
                #  Greeting: AWS_SECRET_ACCESS_KEY
                  
     #build1:
