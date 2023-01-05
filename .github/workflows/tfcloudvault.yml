@@ -17,10 +17,10 @@ jobs:
                 caCertificate: ${{ secrets.TFC_VAULT_CA }}
                 method: token
                 token: ${{ secrets.TFCVAULT }}
-                namespace: admin/tfc
+                namespace: admin/
                 secrets: |
                    kv/foo accesskey | AWS_ACCESS_KEY_ID ;
-                   kv/foo secretkey | AWS_SECRET_ACCESS_KEY ;
+                   kv/foo secretkey | AWS_SECRET_ACCESS_KEY 
       
             - name: Unit Test
               run: |
