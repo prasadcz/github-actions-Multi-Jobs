@@ -17,7 +17,7 @@ jobs:
                 method: approle/role/my-role
                 authPayload: |
                   {
-                    "role_id": "${{ secrets.PKI_INT_CONFIG_ISSUERS_ROLE }}",
+                    "role_id": "${{ secrets.PKI_INT_CONFIG_ISSUERS_ROLE_ID }}",
                     "secret_id": "${{ secrets.VAULT_AUTOMATION_SECRET_ID }}"
                   } 
                 caCertificate: ${{ secrets.ISSUE_CA }}
