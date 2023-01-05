@@ -14,13 +14,14 @@ jobs:
               uses: hashicorp/vault-action@v2
               with:
                 url: https://vault-cluster-public-vault-9bc72c0a.954833d8.z1.hashicorp.cloud:8200/
+                caCertificate: ${{ secrets.CA }}
                 method: approle/role/my-role
                 authPayload: |
                   {
                     "role_id": "${{ secrets.PKI_INT_CONFIG_ISSUERS_ROLE_ID }}",
                     "secret_id": "${{ secrets.VAULT_AUTOMATION_SECRET_ID }}"
                   } 
-                caCertificate: ${{ secrets.CA }}
+              
                 #method: token
                 token: ${{ secrets.TFCVAULT }}
                 namespace: admin/
