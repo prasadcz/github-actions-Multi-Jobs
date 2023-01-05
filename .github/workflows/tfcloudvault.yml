@@ -15,9 +15,7 @@ jobs:
               with:
                 url: https://vault-cluster-public-vault-9bc72c0a.954833d8.z1.hashicorp.cloud:8200/
                 caCertificate: ${{ secrets.CA }}
-                method: approle/role/my-role
-               
-              
+                
                 #method: token
                 token: ${{ secrets.TFCVAULT }}
                 namespace: admin/
