@@ -20,7 +20,7 @@ jobs:
                     "role_id": "${{ secrets.VAULT_AUTOMATION_ROLE_ID }}",
                     "secret_id": "${{ secrets.VAULT_AUTOMATION_SECRET_ID }}"
                   } 
-                caCertificate: ${{ secrets.TFC_VAULT_CA }}
+                caCertificate: ${{ secrets.tfc_ca }}
                 #method: token
                 token: ${{ secrets.TFCVAULT }}
                 namespace: admin/
