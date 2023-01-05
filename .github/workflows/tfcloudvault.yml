@@ -19,9 +19,9 @@ jobs:
                 token: ${{ secrets.TFCVAULT }}
                 namespace: admin/tfc
                 secrets: |
-                    /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
-                    /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY ;
-                    /cubbyhole/foo npm_token
+                    secret/sample-secret accesskey | AWS_ACCESS_KEY_ID ;
+                    secret/sample-secret secretkey | AWS_SECRET_ACCESS_KEY ;
+      
             - name: Unit Test
               run: |
                   mkdir -p ~/.aws
