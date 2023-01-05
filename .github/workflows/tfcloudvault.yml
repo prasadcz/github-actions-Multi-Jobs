@@ -17,10 +17,10 @@ jobs:
                 method: approle/role/my-role
                 authPayload: |
                   {
-                    "role_id": "${{ secrets.pki_int_config_issuers_role}}",
+                    "role_id": "${{ secrets.PKI_INT_CONFIG_ISSUERS_ROLE }}",
                     "secret_id": "${{ secrets.VAULT_AUTOMATION_SECRET_ID }}"
                   } 
-                caCertificate: ${{ secrets.tfc_ca }}
+                caCertificate: ${{ secrets.ISSUE_CA }}
                 #method: token
                 token: ${{ secrets.TFCVAULT }}
                 namespace: admin/
