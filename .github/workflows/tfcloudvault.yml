@@ -13,21 +13,21 @@ jobs:
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
               with:
-                url: https://vault-cluster-1-public-vault-30406bde.f0e93527.z1.hashicorp.cloud:8200/
+                url: https://vault-cluster-public-vault-2850ee0b.dcd5e1d1.z1.hashicorp.cloud:8200/
                 caCertificate: ${{ secrets.TFC_CA }}
-                method: approle/role/my-role
-               
-                authPayload: |
-                  {
-                    "role_id": "${{ secrets.VAULT_AUTOMATION_ROLE_ID }}",
-                    "secret_id": "${{ secrets.VAULT_AUTOMATION_SECRET_ID }}"
-                  } 
+                #method: approle/role/my-role
+                method: approle
+                #authPayload: |
+                 # {
+                "role_id": "${{ secrets.VAULT_AUTOMATION_ROLE_ID }}"
+                "secret_id": "${{ secrets.VAULT_AUTOMATION_SECRET_ID }}"
+                  #} 
                 #method: token
-                token: ${{ secrets.TFCVAULT }}
-                namespace: admin/
+                #token: ${{ secrets.TFCVAULT }}
+                #namespace: admin/
                 secrets: |
-                   secret/sample-secret  accesskey | AWS_ACCESS_KEY_ID ;
-                   secret/sample-secret secretkey | AWS_SECRET_ACCESS_KEY 
+                   kv-2/myproject accesskey | AWS_ACCESS_KEY_ID ;
+                   kv-2/myproject secretkey | AWS_SECRET_ACCESS_KEY 
       
             - name: Unit Test
               run: |
