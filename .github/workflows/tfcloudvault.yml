@@ -13,7 +13,7 @@ jobs:
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
               with:
-                url: https://vault-cluster-public-vault-9bc72c0a.954833d8.z1.hashicorp.cloud:8200/
+                url: https://vault-cluster-1-public-vault-30406bde.f0e93527.z1.hashicorp.cloud:8200/
                 caCertificate: ${{ secrets.TFC_CA }}
                 method: approle/role/my-role
                
