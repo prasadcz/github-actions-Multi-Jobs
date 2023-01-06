@@ -14,7 +14,7 @@ jobs:
               uses: hashicorp/vault-action@v2
               with:
                 url: https://vault-cluster-public-vault-2850ee0b.dcd5e1d1.z1.hashicorp.cloud:8200
-                #caCertificate: ${{ secrets.TFC_CA }}
+                caCertificate: ${{ secrets.TFC_CA }}
                 #method: approle/role/my-role
                 method: approle
                 #authPayload: |
