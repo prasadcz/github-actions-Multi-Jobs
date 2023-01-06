@@ -19,8 +19,8 @@ jobs:
                 method: approle
                 #authPayload: |
                  # {
-                role_id: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
-                secret_id: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}
+                roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
+                secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}
 
                 #method: token
                 #token: ${{ secrets.TFCVAULT }}
