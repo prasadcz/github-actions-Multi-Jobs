@@ -19,6 +19,7 @@ jobs:
                 token: ${{ secrets.TFCVAULT }}  
                 #method: kubernetes
                 method: approle/
+                authPayload: |
                 roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
                 secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}
                 kubernetesTokenPath: /var/run/secrets/kubernetes.io/serviceaccount/token
