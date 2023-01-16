@@ -24,7 +24,7 @@ jobs:
                 #secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}
 
                 token: \${{ secrets.TFCVAULT }}
-                #namespace: admin/
+                namespace: admin/foo/
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
