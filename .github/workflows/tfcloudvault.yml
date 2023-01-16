@@ -47,9 +47,15 @@ jobs:
               with:
                 url: https://vault-cluster-public-vault-9d3cc5f0.ec174759.z1.hashicorp.cloud:8200/
                 #url: http://3.93.191.220:8200/
-                method: token
+                method: approle
+                caCertificate: ${{ secrets.TFC_CA }}
                 token: ${{ secrets.TFC_VAULT_TOKEN }} 
                 #token: ${{ secrets.VAULT}}
+                authPayload: |
+                  roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
+                  secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}      
+                  namespace: admin
+                exportToken: true
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
