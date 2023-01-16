@@ -51,6 +51,8 @@ jobs:
                 caCertificate: ${{ secrets.TFC_CA }}
                 token: ${{ secrets.TFC_VAULT_TOKEN }} 
                 #token: ${{ secrets.VAULT}}     
+                roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
+                secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}  
                 namespace: admin
                 exportToken: true
                 secrets: |
