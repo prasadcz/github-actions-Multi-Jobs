@@ -50,4 +50,6 @@ jobs:
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
-               
+         env:
+          CI: true
+          ACTIONS_STEP_DEBUG: true
