@@ -22,9 +22,9 @@ jobs:
                  # {
                 #roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
                 #secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}
-
+                method: approle
                 token: ${{ secrets.TFCVAULT }}
-                namespace: admin/foo/
+                namespace: admin/
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
