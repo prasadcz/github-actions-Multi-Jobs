@@ -15,6 +15,9 @@ jobs:
               with:
                 url: https://vault-cluster-public-vault-9d3cc5f0.ec174759.z1.hashicorp.cloud:8200
                 tlsSkipVerify: true
+                method: kubernetes
+                #role: <Vault Kubernetes Auth Role Name>
+                kubernetesTokenPath: /var/run/secrets/kubernetes.io/serviceaccount/token
                 #caCertificate: ${{ secrets.TFC_CA }}
                 #method: approle/role/my-role
                 #method: approle
@@ -22,7 +25,7 @@ jobs:
                  # {
                 #roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
                 #secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}
-                method: token
+                #method: token
                 token: ${{ secrets.TFCVAULT }}
                 namespace: admin/
                 secrets: |
