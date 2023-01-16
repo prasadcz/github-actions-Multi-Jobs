@@ -18,7 +18,7 @@ jobs:
                 #method: token
                 token: ${{ secrets.TFCVAULT }}  
               
-                method: approle/
+                method: approle/role/hcp-vault/
                 authPayload: |
                 roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
                 secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}
