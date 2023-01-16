@@ -45,6 +45,6 @@ jobs:
                 method: token
                 token: ${{ secrets.TFCVAULT }} 
                 secrets: |
-                    /infra/aws/accesskey | AWS_ACCESS_KEY_ID ;
-                    /infra/aws/secretkey | AWS_SECRET_ACCESS_KEY 
+                    /infra/aws/accesskey accesskey | AWS_ACCESS_KEY_ID ;
+                    /infra/aws/secretkey secretkey | AWS_SECRET_ACCESS_KEY 
                
