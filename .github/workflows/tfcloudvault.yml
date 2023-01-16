@@ -26,8 +26,8 @@ jobs:
                 token: ${{ secrets.TFCVAULT }}
                 namespace: admin/
                 secrets: |
-                   kv/secrets/ci accesskey | AWS_ACCESS_KEY_ID ;
-                   kv/secrets/ci secretkey | AWS_SECRET_ACCESS_KEY 
+                    /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
+                    /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
       
             - name: Unit Test
               run: |
