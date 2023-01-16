@@ -22,7 +22,7 @@ jobs:
                  # {
                 #roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
                 #secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}
-                method: approle
+                method: token
                 token: ${{ secrets.TFCVAULT }}
                 namespace: admin/
                 secrets: |
