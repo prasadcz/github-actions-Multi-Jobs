@@ -50,11 +50,8 @@ jobs:
                 method: approle
                 caCertificate: ${{ secrets.TFC_CA }}
                 token: ${{ secrets.TFC_VAULT_TOKEN }} 
-                #token: ${{ secrets.VAULT}}
-                authPayload: |
-                  roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
-                  secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}      
-                  namespace: admin
+                #token: ${{ secrets.VAULT}}     
+                namespace: admin
                 exportToken: true
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
