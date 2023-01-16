@@ -23,6 +23,7 @@ jobs:
                 roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
                 secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}      
                 namespace: admin/
+                exportToken: true
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
