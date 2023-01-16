@@ -18,11 +18,11 @@ jobs:
                 #method: token
                 token: ${{ secrets.TFCVAULT }} 
                 #caCertificate: ${{ secrets.TFC_CA }}
-                method: approle
+                #method: approle
                 #authPayload: |
-                roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
-                secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}      
-                namespace: admin/
+                #roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
+                #secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}      
+                #namespace: admin/
                 exportToken: true
                 secrets: |
                     /infra/aws accesskey | AWS_ACCESS_KEY_ID ;
