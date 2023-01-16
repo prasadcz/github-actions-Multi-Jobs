@@ -27,7 +27,7 @@ jobs:
              
                 
                                
-                #namespace: admin/
+                namespace: foo/
                 secrets: |
                     /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
                     /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
