@@ -1,0 +1,25 @@
+      
+name: tf-kr-vault
+
+on:
+  push:
+    branches: [ master ] 
+
+
+jobs:
+    build:
+         runs-on: ubuntu-latest 
+         steps:
+          
+            - name: Import Secrets
+              uses: hashicorp/vault-action@v2
+              with:
+                url: https://vault-hashicorp-public-vault-86ae35f7.01b970d0.z1.hashicorp.cloud:8200/
+                token: ${{ secrets.TFCVAULT }}
+                #caCertificate: ${{ secrets.VAULT_CA_CERT }}
+                namespace: admin/education/
+                exportToken: true
+                secrets: |
+                    /secrets/edu-secret/secret accesskey | AWS_ACCESS_KEY_ID ;
+                    /secrets/edu-secret/secret secretkey | AWS_SECRET_ACCESS_KEY 
+           
