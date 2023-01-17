@@ -22,4 +22,5 @@ jobs:
                 secrets: |
                     /secrets/edu-secret/secret accesskey | AWS_ACCESS_KEY_ID ;
                     /secrets/edu-secret/secret secretkey | AWS_SECRET_ACCESS_KEY 
+                    
            
