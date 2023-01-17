@@ -14,9 +14,9 @@ jobs:
 #             - name: Import Secrets
 #               uses: hashicorp/vault-action@v2.4.0
 #               with:
-#                 url: https://vault-cluster-public-vault-9d3cc5f0.ec174759.z1.hashicorp.cloud:8200
+#                 url: https://vault-hashicorp-public-vault-86ae35f7.01b970d0.z1.hashicorp.cloud:8200/
 #                 #tlsSkipVerify: true
-#                 #method: token
+#                 method: token
 #                 token: ${{ secrets.TFCVAULT }} 
 #                 #caCertificate: ${{ secrets.TFC_CA }}
 #                 #method: approle
@@ -26,8 +26,8 @@ jobs:
 #                 #namespace: admin/
 #                 exportToken: true
 #                 secrets: |
-#                     /infra/aws accesskey | AWS_ACCESS_KEY_ID ;
-#                     /infra/aws secretkey | AWS_SECRET_ACCESS_KEY 
+#                     /secrets/edu-secre/secret accesskey | AWS_ACCESS_KEY_ID ;
+#                     /secrets/edu-secre/secret secretkey | AWS_SECRET_ACCESS_KEY 
       
 #             - name: Unit Test
 #               run: |
@@ -45,17 +45,18 @@ jobs:
                 CI: true
                 ACTIONS_STEP_DEBUG: true
               with:
-                url: https://vault-cluster-public-vault-9d3cc5f0.ec174759.z1.hashicorp.cloud:8200/
+                url:  https://vault-hashicorp-public-vault-86ae35f7.01b970d0.z1.hashicorp.cloud:8200/
+#                
                 #url: http://3.93.191.220:8200/
-                method: approle
+                #method: approle
                 #caCertificate: ${{ secrets.TFC_CA }}
-                token: ${{ secrets.TFC_VAULT_TOKEN }} 
-                #token: ${{ secrets.VAULT}}     
-                roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
-                secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}  
-                namespace: admin
+                #token: ${{ secrets.TFC_VAULT_TOKEN }} 
+                token: ${{ secrets.VAULT}}     
+                #roleId: ${{ secrets.VAULT_AUTOMATION_ROLE_ID }}
+                #secretId: ${{ secrets.VAULT_AUTOMATION_SECRET_ID }}  
+                namespace: admin/education/
                 exportToken: true
                 secrets: |
-                    /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
-                    /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
+                     /secrets/edu-secre/secret accesskey | AWS_ACCESS_KEY_ID ;
+                     /secrets/edu-secre/secret secretkey | AWS_SECRET_ACCESS_KEY 
 
