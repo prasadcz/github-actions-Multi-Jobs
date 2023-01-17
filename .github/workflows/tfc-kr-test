@@ -21,6 +21,6 @@ jobs:
                 exportToken: true
                 secrets: |
                     /secrets/edu-secret/secret accesskey | AWS_ACCESS_KEY_ID ;
-                    /secrets/edu-secret/secret secretkey | AWS_SECRET_ACCESS_KEY 
+                    /secrets/edu-secret/secret secretkey | AWS_SECRET_ACCESS_KEY
                     
            
