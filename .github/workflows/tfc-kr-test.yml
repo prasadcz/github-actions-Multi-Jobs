@@ -19,7 +19,7 @@ jobs:
                 namespace: admin/education/
                 exportToken: true
                 secrets: |
-                    /secrets/edu-secret/secret accesskey | AWS_ACCESS_KEY_ID ;
-                    /secrets/edu-secret/secret secretkey | AWS_SECRET_ACCESS_KEY
+                    /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
+                    /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
                     
            
