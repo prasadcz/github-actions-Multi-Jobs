@@ -13,9 +13,9 @@ jobs:
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
               with:
-                url: https://vault-hashicorp-public-vault-86ae35f7.01b970d0.z1.hashicorp.cloud:8200/
+                url: https://vault-cluster-public-vault-09ee03a0.c7ad34bc.z1.hashicorp.cloud:8200/
                 token: ${{ secrets.TFCVAULT }}
-                caCertificate: ${{ secrets.VAULT_CA_CERT }}
+                caCertificate: ${{ secrets.VAULT_CA_CERT_HCP }}
                 namespace: admin/education/
                 exportToken: true
                 secrets: |
