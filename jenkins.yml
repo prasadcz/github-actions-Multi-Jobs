@@ -1,0 +1,742 @@
+credentials:
+  system:
+    domainCredentials:
+    - credentials:
+      - usernamePassword:
+          description: "Jiracerd"
+          id: "Jiracerd"
+          password: "{AQAAABAAAAAgXHXe0h0XvQMz/SdDTUox6OvwGW80vmYuLgR90KfAu/jV2EdHi6txD78zpGe7e3zt}"
+          scope: GLOBAL
+          username: "naveen.raghunandan"
+      - usernamePassword:
+          description: "SreekanthJiraCred"
+          id: "SreekanthJiraCred"
+          password: "{AQAAABAAAAAg1/JbrExdNDdJuw/BQEXl/bwwf3UT2p8GOnM0tWBVQhZ0tCZ8iM50FV+WxMFgvUXg}"
+          scope: GLOBAL
+          username: "Sreekanth Reddy"
+      - usernamePassword:
+          id: "6241a45c-44b0-41a4-a16a-59b1bd7913b9"
+          password: "{AQAAABAAAAAQ9ZGvYeoGyeS3TNwy+ZGjCdEF6v7bIhIk1kHKxjwWetk=}"
+          scope: GLOBAL
+          username: "sathish.kumar@cloudzenix.com"
+      - string:
+          description: "Jira integration"
+          id: "sathish"
+          scope: GLOBAL
+          secret: "{AQAAABAAAABQ7L72DlVJPQFJhuXYu3DkdSolTUBZjopNSoBjFCXFIERpdjwvxw6IL+Qf2j+ACYO/dAJ9TXB4gMO5vqVmvq1AxGqRxTGg9+GHnxfSAly66BVm2xRmKPAE6w3nyCsTx6AR}"
+      - usernamePassword:
+          id: "BB_Jenkins"
+          password: "{AQAAABAAAAAQ7lTlFmhcjCehMHneBYBE+6JGTwcGu+wS5z3p8G+zUPs=}"
+          scope: GLOBAL
+          username: "naveen_raghunandan"
+          usernameSecret: true
+      - usernamePassword:
+          description: "mymailid"
+          id: "mymailid"
+          password: "{AQAAABAAAAAQJMVCsYK3RDP66Qm19+L1sOEYFfk0SO8p8DCeQ1KrAIk=}"
+          scope: GLOBAL
+          username: "sreekanthm747@gmail.com"
+          usernameSecret: true
+      - usernamePassword:
+          description: "my-dockerhub-credentials"
+          id: "my-dockerhub-credentials"
+          password: "{AQAAABAAAAAQ+GeH7GRWhD03y3/mFFX4BDMd5k6f5/BMfzYqlLK2/40=}"
+          scope: GLOBAL
+          username: "cloudzenix"
+      - usernamePassword:
+          description: "Docker-hub-cred"
+          id: "Docker-hub-cred"
+          password: "{AQAAABAAAAAQ2yKH1WbpUfMKq2Lp2dISu7jOtlzQJMN23oc6GRkN9fI=}"
+          scope: GLOBAL
+          username: "cloudzenix"
+      - usernamePassword:
+          description: "Docker-hub-tocken"
+          id: "Docker-hub-tocken"
+          password: "{AQAAABAAAAAwuAux58i79loHt/925ZmVMTfZU4xtVOJXR2M3KF1gPP0jPcFLm+RsydX5stf1NzUbKI4T/2TKa7qp04rMCPLwjg==}"
+          scope: GLOBAL
+          username: "cloudzenix"
+      - string:
+          description: "docker-hubcred"
+          id: "docker-hubcred"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAQcahQ2Nuqks/UaeCnZC48G8PuRMNxKmqMzIw3qh/RlJ0=}"
+      - usernamePassword:
+          id: "jenkins_bb_webhook"
+          password: "{AQAAABAAAAAQ1eyUoCN+iWPq8TCjp9eXnWQpHDdXwgJ/S+ZB7/nk6Fw=}"
+          scope: GLOBAL
+          username: "jenkins_bb"
+      - usernamePassword:
+          description: "Quay_Cred"
+          id: "Quay_Cred"
+          password: "{AQAAABAAAAAQpup8LLVCo5PWu53NlKQ92fePS6/0uPZNJK5UhCmdBB0=}"
+          scope: GLOBAL
+          username: "quayadmin"
+      - usernamePassword:
+          description: "nexus_cred"
+          id: "nexus_cred"
+          password: "{AQAAABAAAAAQqwgXYD8vUZZRpR2lbXQadktkUrOM3Dtv1099OQTtp2o=}"
+          scope: GLOBAL
+          username: "admin"
+      - usernamePassword:
+          description: "nexusdocred"
+          id: "nexusdocred"
+          password: "{AQAAABAAAAAQ3fKgbhkxkjBtDivgkJWJgcUgPSmoTgXbS3kMEGHyefM=}"
+          scope: GLOBAL
+          username: "admin"
+      - string:
+          description: "nexus_Scrt"
+          id: "nexus_Scrt"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAQOyMx+zp/+TuydwQR9eDbzqdGoO9MggPVcBt2NlJhZFU=}"
+      - usernamePassword:
+          description: "MY_BB_CRED"
+          id: "MY_BB_CRED"
+          password: "{AQAAABAAAAAgsg1Rhy/O2EIMfAq43vN/NaEnmL4SWwkoJQZZUveSoYWBeymkFPNNH2+RuQgjSjQu}"
+          scope: GLOBAL
+          username: "SreekantReddy"
+      - usernamePassword:
+          description: "Couchdb_Server"
+          id: "Couchdb_Server"
+          password: "{AQAAABAAAAAQKlCnvyUDEVvhV+ARc3irDlRMFbfxSfopVGV+yWHnKc8=}"
+          scope: GLOBAL
+          username: "cloudzenix"
+      - string:
+          description: "Couchdb_Sert"
+          id: "Couchdb_Sert"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAQDWVTwLYxJJBOV43oag/hNAObfrY2qFTzwstHLVVX2mo=}"
+      - string:
+          description: "sonarsert"
+          id: "Sonarsert"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAwvjEzwmj1GfpQvI1sSEqOcM9G+hSDZb7ZdGlpsBwFIZL0SgpnCkgZg5mFqnpULw2xNg1mX+DN31KBi8h5Io6cZw==}"
+      - string:
+          description: "OC_TOCKEN"
+          id: "OC_TOCKEN"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAUgM9MBnOYu1upO+MLTn6iz2im0O3ifj5XV52SPsNCEF0l8xhx9kbx9LvDLk2vCOOefBmr3WCbquXBxYU1wypypyyl9RI4ZnwIjy50SAGlVmOkuFCQUojU+iAq6ZF1zigaYRe83AD5xXN9yTEhH8hsZASgWNK19OiICk7UFQ2J0nrFRsm/HgDng4/gsA/HC8aUOg22gboboDfeqKbqbLRHTi7IJwRe+47ZZrkwaKRrWuNnNPNQXZitZ3/tNkN2tFjwfqR/6bcVPCch/9ihhUtucvRUGKyGaLvyIp5o/Bfi9rwszX3WD+erjfI/ZhU259bOlJdZK6LnswRQAMNVzTt88OhNJZW+/uxyMvbFg0y2PtJj+Xiws0abShcHAUxlsxFCS9cGPmc851oBdQtnW7whn5C3jFiEK1asHC6GMeQUwQMX+A5iNkWEypFD9jwzWFqJ/4wpLraOmQO3LJdNwtcce9WLG/L8xUZjwP5JRgJl/bMM0PRWS+r1qzP20dYia5LtE2o9ME2HJWxbDs/N44ti4o4QDOwNa5iAxmAfCKQluCIGJfLdFAakOIf8Ylf7FivNuCWigwyImNMz0PjOS+l3qonWYl3P3fQpyjrPjuulCFX+mXzJuEWtxMLJQB+u+7H+mcOgCpOQjrXls5T7OAlEfcHQ71JHLNjYtWHMLK2ojqFc9/OfS7LJeUCxJZwNCQngBxnyKPiIrITUommoX+ghO2GZ+fCYDByQtnPR3pHshVLkkZH7PugakYLMgPSzPlL2sOFLyY5xGevX1H8zq9b1IyX+3gijc4A926fGmcCHxh3v8YhtAJe6hc1shxwXoFnLxvKEaKUPQrXAYHvEiyAjcOulGwLoPkwM3t3xHbGHEplGPKnaXRMq4NOSodt5+zhFy6ftj0iguq+pQ775hABltaPiHnsedwWY1Z3w8bTUWOw37R7MlVZ8ZXMvv2xzGtLfIKC+0rAzhKBdZaly1nYWvro1kgq9QG5iuu9cd/GZD3faWdlaQT2yOtYHeD+7tN27nUPW9mQmpjRKOoWcCyi2g/kd6MC0o1kjvKFpIe6VGDox9JHvlSjlwrc9H5w+jihZsn+jjJZg25PlD7r49VBqFrQS9+w9cmjxhhemtcZ64xUAWKCLCvOrvAskRY9NSYoHDwwt8BjPJlLLtKWgZunpdz03qLibPkn61QIi0Q7RS1bKwPB8i8BPbemyKPR0lo/8E9U3D2Rq+SZQJnEL/VzbrndYiCFTkA8+WL9wtAQWFi/YDbAuLtCOd3N0guuotT/uHT81B7dDh10rRwYPkOhpjJfhLU7IPPUrgiTELdG6Ku8fOMLgHdnAK9/RZLz/KjLCjfMRZ2pGvva3/JPY4eOkSynLEqE2jEMXZaoK7/i4Ldb1CkQE3w+EP82MatDMeru4QB53y/lygq32YL7BhAIZ4TZac2Hh0S44d2sBwGlkKKyNS1jxfELbcnoA5mFy837N2w6HVVDivUpD7AiZf7mkR8+jLH2hnkIGMF2ylQLF23A4rthKwavUxayeNmynQtcadvYEhkkOCKZHT6VU8fWxBQvTjxJEhv4GwQRD3XgNZiqWe95U8iw0ymXwv7nQL5GxnWnaf/6qhVrnbdL+MyEx/zLWEr4c/VdPnYc6lR10vUvFdhefA972LL6t4mphLIayjBJSdOxba6kdV+nZSstbibjmP6yYGTh1m5Zzbg1yZ/kwKFqpy3ncCHSlXmW4fE5ckoJjQvUri6QOBmxprkS5bbNYUoXL9vLG3PUsVdjd+gUs=}"
+      - string:
+          description: "oc_psswd"
+          id: "oc_psswd"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAg1h1aJi00LM5SaxzaLQ//SCQjZkt881OsU7JWy0DZtSoV/GUYUiyeQT8SMvMJiL2K}"
+      - string:
+          description: "OC_TOCKEN_CSA"
+          id: "OC_TOCKEN_CSA"
+          scope: GLOBAL
+          secret: "{AQAAABAAAATwpZ+N1ibjAW1xo5b+fPfl9sQ6esy1v8nHCC5dZd1uKAyRZZuCGCcCTKwEU7NdZmEURobKZSg2s2NxbC+UzYSHHVL5a5tqWTLTpRVJlmKanUxNoa4KDUXEdC8tHy+NSpBTZ/e3+j0hScbHXE5UZPq9bEm6DFqtAaVJT1Ywx/5Yb9gVS8x6MAem6zMR7vH98aMgyWPurWwn7Grmgr3d+zhq0M+d7p46cCQ8+9ZRJdbh0dti/34H6iRly2iv5k3I/RfAB5B5/mdymYi7ub2v01yAVI6vqKz1DHX5zcOBh+rJCUcgsq5QaO3dfV/01nX70KY3n/I1L5Pnyo/AAUCCu9gZECwJxCN5/VMhgfbejSWeCsBuKYvgA0mEytL3EV3BzFY8AnB44g36EiYSEVTAs2TSs4NGP+bo17N9XDpL/BtehKCudMW/Y1ftyw/u/4qVbJ8OVyJ+5KYR1P3fd+Wnp1smuNT9G1Q5trmZtCZRRt23tSikgHRfu7nakRg7VhO4Nxse1HI7hQmCXxngq/tX0db1plQuFCInZMYXrw0CAQm149s6ccdB68cTUWSeBe7PdRGjyWiOQ3T1j9yp9dl7JNt6Hpvg3llIOmxjNZ/3U646i+UXj4KlqVyVfCdVCxP4GrXtf9hKBNoQulvvxZDslsosyzuYbph3cOv0z7HWfCOfE5qH87m5ec3ledZskOCp3PyHDlFC82+XGf8t7LAxvjuTLNRUhoqo3GSfvNxYt3kY4t20Vjt0B3g29Yk+5ebobFl3ty79KJy/9Br+/IIMXKNqu4IuNn8fUKfh2hgVHfSYx7AloDgMNmBwOrmU/x7TSDKznxfvP7pxRvfNnWTMntJ6oaLSlnY5ZQwkBZk50pRwHLJ3VMjc4W1qIxsuYqsxTCc0xDiYG0KyoxZBPuHGmsu371BnZMMnG9SBGOBc00n2i3VMMW1USsN44AM9oOQhWeU6+Btup4cFc95NakKuACRjxu1t65KYRtsLiEM+aHuNJxADlVJeySLVjLvEoLULs1ssPY/XGwaNGwrEs7NMLckHR+svhzRaTwi/BEeYl4fZhj+LuuS7AtTg4kppSXuqtN6pTj0hWjT9IVJ+CaUF0P0IH6FG3wV691x5fnh+T2WyQp0ebX4xD8zM91IgZ6uxJf2iABBwofG+LdvduwCfX7sRKLsykgNBf967ARj5VomXSO/ZdRYBmHTRlo5mKpH0ORsaKRcWjXUiMsCvFbY86zIFMSIfeVV9AkIZVhQMVD6FdqjdXts1RS9cZNXISvQ4cQcbmJcgoyHMLSsiFtxxwkzcq1D0pp3RoucgO+r+RzLWZ4Jvz/MJjmKJqYndS4a2TPOrfv9xIgIT7ru9A7OC1SZABYLDl79jlYMJ77oftA/aY13ryH7Q6aAKNCRS5WnW92Li+q9wNPUErKQ387gMW0vd0sNA42LocqEKuJOEgKEzGcopSKTbbz7/wNc52JyWRjr0HBGp/clnpFw5cDVR62pjc/R4gNa4venEi6kEyUCLcLy6GvF64lBnNQQNUr+LMphqYAxOAd8D4LVv1C0KttgDIKmksrB2yfe6ISmU9N5NdN1MHWe2gm+iZWcT44BZMeu5IHciPROhKT7JQLMzV77Oxc4apDQ6YKfjTTWh7Z15SfCsy4YMq61Evv+PWpyDvvUspMmqOZgmsQ66mC6WRHnhs6HMvgVinQlhKsgstk99bYM=}"
+      - string:
+          description: "Docker_lst_Tkn"
+          id: "Docker_lst_Tkn"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAwvOsun4hQvj5q5F5ude/iYUf+PU6If89zPM41z0q/YbM2HH3U4A+onXU93WFH4hXGFWXuUA4lTFA1bIUAbIMDKQ==}"
+      - string:
+          description: "Slack_Tocken"
+          id: "Slack_Tocken"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAg5CtTvFNR/WQQ9hH0RIfXTRCg/g6roweVq0z8IfbQeyzGOwLwofTej1jWj/uUxUZW}"
+      - usernamePassword:
+          description: "open"
+          id: "openshift"
+          password: "{AQAAABAAAAAQ4IlhaFrnlIRfQYsSKvO8S+QVLAi3O8i3BLUXvl+xUtA=}"
+          scope: GLOBAL
+          username: "jenkins"
+      - usernamePassword:
+          description: "open"
+          id: "openshift1"
+          password: "{AQAAABAAAAAQvifgaZOx2bdT4O0hhlmXVEN9Ws57E/nJH8ecgDyUtUo=}"
+          scope: GLOBAL
+          username: "jenkins"
+      - usernamePassword:
+          description: "open"
+          id: "user"
+          password: "{AQAAABAAAAAQs/fgIvjPpGd/adQaqNo8uRSBj8yljlWZhdRf/bGbcIs=}"
+          scope: GLOBAL
+          username: "jenkins"
+      - basicSSHUserPrivateKey:
+          description: "shift"
+          id: "Shift"
+          privateKeySource:
+            directEntry:
+              privateKey: "{AQAAABAAAAGwAcP+hoLe4A4CEKAfkaXF7A2sJZy5GE/LpUcfoB+683WITb39SwFUuqDG8XJj+eM3S8MX4VTsMNOhZJUJ7ofMFbUd9Zhtl7iSsmj7NXbggo8riAxj6pgkdfi81xCSrc9nK5ymujGeG4fIAHqBdf3R7hG/urcRzEy12QUmGkMTR/N0qS4ApWlOBrNfn2XcaBmsl6pg0LaC5aoHDDPYmH3AwporFIjz0cmVALlpkO3cp9KDuul/f29DZX72jOeZQBWJVN2jqhnTKXl36ZSEgH9I14AudtrXhHGaaBAR+sbwi4sE9l5qOaAntpIxmOr9lbsYA5eUH78LfnH3Awb+1zNJ0364jX1zokV+VULS7H7R8ihz8LQINXT5wSrEoihq8zbo0iHXarXE2Bpv40ZRWoLUcVOwC5tAwMmv9u+VcszSlS9iXYyQ/PrJ0lnuhINzMUXl8TsIRvLWEN23UCX74sGiYIcOoU2HqQEvj1q/tF01E2XKr2gNLBfG0gjUkj7QqnW+rMpYEwpE3N6IBjjzgu2jVCqGKEDeY4AozpLPkaefPiM1hj2w97P+nO9TXBp/lfgyEKOilSg/CqbA9pxkKQM2dA==}"
+          scope: GLOBAL
+          username: "jenkins"
+      - string:
+          description: "jfrog"
+          id: "Jfrog"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAQvGpKSUUqrbCs8KvbtUYN/CVYs6k4nZ6aD1KWPXI0DlQ=}"
+      - string:
+          description: "newrelickey"
+          id: "newrelickey"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAwzmj+MOeXtpWJyZXaicyafPye9lJQ98JqKyfALwPGaQOis3ZR0i5bYYh5T3UVfQrApyN2PojhEhIwihHys6VEzA==}"
+      - string:
+          description: "Creds for kubernetes"
+          id: "credentialsId"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAOARgNSoKUgJzooiarl0h8/E/xxGpZkURwIrbXltPtePORX73Y3Hh3acAcl9KOhUNI+sym85CfVaTM9kcvZWJ1s3ThZnqJ6DUetjebsxJmjHf0/ZOg4ZpL8+CH6k8YEIZOFNJvdLqDknhzI0udysp4FGyA8eU2pmAdWwmVuSe/3WZi0GdG4r/KAJCaqwKPMY/37RdyTRUTssmLJJRBAN2ko0Bwlqlls4WRQH4TDSGp7y7MPlTLicPw9825JNQmUZDeufuwc+TtRbZ1qcSrUUXJJQmRMumYVGw2l48jw2pqhvC+3pgIk3XIiVUduHrS9T015ot1XWyDJ+padORbRkj/2t5nfba0pzg+FVncbMuavameJVlRGcfIpMx/R6TojW3326FJINQmtVMVgIQ1ri1Mrt+zh7wv/QbcLqNVBQtNaK57XL9x9s36Gq2nAQTXGjGYbw87VHYqnsGgvqFL6h3Uvoi0Dao2hSTjH4wB5BYY4X4IJEaBMicIBR8FfOO61bTNUp/F8BgiE1bWNIu93FIq8tuLHY7TSQ4lSk+04Jj3R9jgiK+25Es1Hr/efKlXzY4W78d8ZTN163UOkF1lPYd+C3xK4yiAQroKf2AEtOBiFwynNKMfkUOfAseKujIiup3yUw9wEGwIk9F4DL3wexwPIa29S+u8BV05JzUmXtY2SKsnZQAHRKHeiE/G4bvdvZo/Ks1N9bGjl3uxf1KDQkT9Ze5CMs/S05D5Gipadq1ik8dZyOS26X/fXAs1AjOn/jzHvO9mlK3HJ7kPjRZzfmOWnKFIZvARBeZwe6ul5zB3Uh/tv9Rb/N2JANiForx6FZmK865VXyagyFLyffVpYkyo8F1O9nx5zQMNhtDe1vH2kKJkYDt4Zng6OtMAwUAwTaeN3Dcx9lo9sqhFl7s5+far4jj8PImXoPYRer31bDK5LZ+J3T/mOKrJS+fgn0Jwi7tIsNww4rYwF6rm9anD4CI2ETMIPD642lB0IAGVOEC4wYlsf1Pm5gdMrBmiWsO+HJrtNIbvASq5m40Dn9RsUjwE05SxEYNA+NIMiRvRr99qYi7cODLIu9TYsDt98wmucWDiiEK2LiI8jZp5QyXSmht3eg1/qngfNoJGR9K+uJhuutk9h+kFQgzODGcK73Wa/HAW2x4lUPYl/CFEm4S9/ntfufJFM9RnxP+ROQM2fdjyTJN2PIUsItb/0H51Af7zoLMTW}"
+      - string:
+          id: "jenkins-slackbot"
+          scope: GLOBAL
+          secret: "{AQAAABAAAABAre9fddBK19vmBMX2yZ9MYn8/Biy0ZInOrmyw2FfqyQvmKWcsfxrIsqZUkQ+/w4doWcIxetJOWsy+E7tbhx+2S79nghfsM45mFNwCqEFH2ek=}"
+      - basicSSHUserPrivateKey:
+          id: "Targetagent"
+          privateKeySource:
+            directEntry:
+              privateKey: "{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}"
+          scope: GLOBAL
+          username: "ec2-user"
+      - basicSSHUserPrivateKey:
+          id: "jumpbox"
+          privateKeySource:
+            directEntry:
+              privateKey: "{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}"
+          scope: GLOBAL
+          username: "ec2-user"
+      - file:
+          fileName: "config"
+          id: "k8's_configfile"
+          scope: GLOBAL
+          secretBytes: "{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}"
+      - usernamePassword:
+          description: "CZ Service account token "
+          id: "cz_bb_svc"
+          password: "{AQAAABAAAAAwtrijDFg84+Yf0+oLm6jTqX76ha0JuiYA8EDn7lK8KM1KTD3D+rLO+EUc2nwOg/wGQCgfTz9PHwtlsAIRndVkWQ==}"
+          scope: GLOBAL
+          username: "CZSVC"
+      - gitLabApiTokenImpl:
+          apiToken: "{AQAAABAAAAAgtu5okOIUIxUyoPj+yV95qa4NhGgxlk5F297WVHegkEnJkPsvnb3pIC0CsZClNJ07}"
+          description: "gitlab token"
+          id: "16b35dfd-2af1-48ce-b88d-6d6b2f0d17ae"
+          scope: GLOBAL
+      - usernamePassword:
+          id: "f50e62bc-7863-4547-a83c-e5e7b86b98dc"
+          password: "{AQAAABAAAAAQ67D+4f0A1CTj/YqkdvM4huJgG/C4IaoYbt7I68u+byM=}"
+          scope: GLOBAL
+          username: "krithikr98"
+      - usernamePassword:
+          description: "githubnewtoken"
+          id: "427ad041-6d65-4dc4-8ad4-6dcf9ab33c9c"
+          password: "{AQAAABAAAABgGp3ZTlpOV7THKcKB/3uz32IBRQaG1SDYAyIUdJVe+2LIYWP85DtfOhlu/sGpMS+0Pien5rt6MaImWLwAa0fxF/m8gq9sFvM2CA88ff0Z0lrOt1omv0oqc/tKz5QBhREykHqBmWOqqc66O/eEbIz4og==}"
+          scope: GLOBAL
+          username: "krithikr98"
+      - usernamePassword:
+          description: "git5"
+          id: "git5"
+          password: "{AQAAABAAAAAwS/8tUt27nB/yWOZN4ZmVxWf6ZyFZLi/ilWbK3PCeXM73sA3LcW0qtmIiAKLIA2ucCa3Nz65bbS5J71ojJC4emQ==}"
+          scope: GLOBAL
+          username: "krithikr98"
+      - string:
+          description: "TFC_TOKEN"
+          id: "TFC_TOKEN"
+          scope: GLOBAL
+          secret: "{AQAAABAAAABg0A/B8gehxUdu6mJhuRwGw9qaY4C77bxHk439WWtmF94Y+/0HNPbGHw3Hh0cUHjZvZ4WzpVfNQXiLVYwstrw10hfLgtezOgPBqA3XOB9VdIpI9rbd6VByzFg3HMsJ3ug38WMbRIdnWR3DH5CimbUvfw==}"
+      - usernamePassword:
+          description: "sss"
+          id: "githubjfrog"
+          password: "{AQAAABAAAAAw9DhOtEZ7sExdD4AExhyIjjWzmPICSb5uviWRypM548SVqfClXAXY2/J0m8OVugW1I62LYjSe7UtvcPoqfZG2Cw==}"
+          scope: GLOBAL
+          username: "anandmahurakar"
+      - usernamePassword:
+          description: "slave-config"
+          id: "slave-config"
+          password: "{AQAAABAAAAAQ2lDkhhOPyN7PoCK1829d3Rm5iE3O/KTF5ocVjszXkB8=}"
+          scope: GLOBAL
+          username: "root"
+      - usernamePassword:
+          description: "github-prasad"
+          id: "github-prasad"
+          password: "{AQAAABAAAAAwfzC4C6OZdd9mPJ96x9pNfLnSo+nh2N1wi3XdAN67HDzc7kXJZZ2K6K++A5TyCr271TBbk7zsjht5LpU+eh4pkg==}"
+          scope: GLOBAL
+          username: "prasadcz"
+      - defaultSnykApiToken:
+          description: "snyk"
+          id: "snyk"
+          scope: GLOBAL
+          token: "{AQAAABAAAAAwMfK/7vZe4heIihcNAXhL/7jfYuQVeEJeFEMrxtzC7URNqyhLWJdvrB7Az1RO3aq2L+NTkcaVgKFQZa4kTMzWiw==}"
+      - string:
+          description: "s3-bucket"
+          id: "artefact-bucket-name"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAgmkdojlPpjFbqZVYGVajOIqodmWj7d9bsn6Dt1gyt2dEH16NDyZN6Qist8ingZsdG}"
+      - string:
+          description: "jfrog-pwd"
+          id: "jfrog-pwd"
+          scope: GLOBAL
+          secret: "{AQAAABAAAAAQ5JR9Z5wKpUCDSl8KbBa3c3UpK5FyyQXOxa4u/vS5urI=}"
+      - usernamePassword:
+          description: "slave"
+          id: "slave"
+          password: "{AQAAABAAAAAQ0bjXqtvSn4WT6umYWiuyjuTrx2XuLm1xTsnqtpFmQ+I=}"
+          scope: GLOBAL
+          username: "root"
+jenkins:
+  agentProtocols:
+  - "JNLP4-connect"
+  - "Ping"
+  authorizationStrategy:
+    azureAdMatrix:
+      permissions:
+      - "USER:Job/Build:Anand.Mahurakar@cloudzenix.com (b6617e34-2264-40a4-8fb6-275b5afec911)"
+      - "USER:Job/Build:Krithi.KR@cloudzenix.com (1a1d8fe1-766f-4bcf-bf70-53f1354f4529)"
+      - "USER:Job/Build:Sreehari.Reddy@cloudzenix.com (0d81d81b-4b08-46b6-b9ab-148cd8c34bfb)"
+      - "USER:Job/Build:Vinayak.Shivasimpi@cloudzenix.com (b314d49e-10f0-45ff-857b-8b032a607031)"
+      - "USER:Job/Build:karthik.Venkataramaiah@cloudzenix.com (9b202f47-ef7c-469d-9ff8-5d37e11be47e)"
+      - "USER:Job/Build:karthikd.gowda@cloudzenix.com (8dd888fb-6c61-4fd5-b0b9-c480508749f8)"
+      - "USER:Job/Build:renuka.prasad@cloudzenix.com (ef49ced8-7545-40b2-ba31-a2e3c39aed1d)"
+      - "USER:Job/Build:vijay.nimbalkar@cloudzenix.com (c3559211-0ed1-4f90-9ff4-cdd7b054287e)"
+      - "USER:Job/Cancel:Anand.Mahurakar@cloudzenix.com (b6617e34-2264-40a4-8fb6-275b5afec911)"
+      - "USER:Job/Cancel:Krithi.KR@cloudzenix.com (1a1d8fe1-766f-4bcf-bf70-53f1354f4529)"
+      - "USER:Job/Cancel:Sreehari.Reddy@cloudzenix.com (0d81d81b-4b08-46b6-b9ab-148cd8c34bfb)"
+      - "USER:Job/Cancel:Vinayak.Shivasimpi@cloudzenix.com (b314d49e-10f0-45ff-857b-8b032a607031)"
+      - "USER:Job/Cancel:karthik.Venkataramaiah@cloudzenix.com (9b202f47-ef7c-469d-9ff8-5d37e11be47e)"
+      - "USER:Job/Cancel:karthikd.gowda@cloudzenix.com (8dd888fb-6c61-4fd5-b0b9-c480508749f8)"
+      - "USER:Job/Cancel:renuka.prasad@cloudzenix.com (ef49ced8-7545-40b2-ba31-a2e3c39aed1d)"
+      - "USER:Job/Cancel:vijay.nimbalkar@cloudzenix.com (c3559211-0ed1-4f90-9ff4-cdd7b054287e)"
+      - "USER:Job/Configure:Anand.Mahurakar@cloudzenix.com (b6617e34-2264-40a4-8fb6-275b5afec911)"
+      - "USER:Job/Configure:Vinayak.Shivasimpi@cloudzenix.com (b314d49e-10f0-45ff-857b-8b032a607031)"
+      - "USER:Job/Configure:karthikd.gowda@cloudzenix.com (8dd888fb-6c61-4fd5-b0b9-c480508749f8)"
+      - "USER:Job/Create:Anand.Mahurakar@cloudzenix.com (b6617e34-2264-40a4-8fb6-275b5afec911)"
+      - "USER:Job/Create:Krithi.KR@cloudzenix.com (1a1d8fe1-766f-4bcf-bf70-53f1354f4529)"
+      - "USER:Job/Create:Sreehari.Reddy@cloudzenix.com (0d81d81b-4b08-46b6-b9ab-148cd8c34bfb)"
+      - "USER:Job/Create:Vinayak.Shivasimpi@cloudzenix.com (b314d49e-10f0-45ff-857b-8b032a607031)"
+      - "USER:Job/Create:karthik.Venkataramaiah@cloudzenix.com (9b202f47-ef7c-469d-9ff8-5d37e11be47e)"
+      - "USER:Job/Create:karthikd.gowda@cloudzenix.com (8dd888fb-6c61-4fd5-b0b9-c480508749f8)"
+      - "USER:Job/Create:renuka.prasad@cloudzenix.com (ef49ced8-7545-40b2-ba31-a2e3c39aed1d)"
+      - "USER:Job/Create:vijay.nimbalkar@cloudzenix.com (c3559211-0ed1-4f90-9ff4-cdd7b054287e)"
+      - "USER:Job/Delete:Vinayak.Shivasimpi@cloudzenix.com (b314d49e-10f0-45ff-857b-8b032a607031)"
+      - "USER:Job/Read:Anand.Mahurakar@cloudzenix.com (b6617e34-2264-40a4-8fb6-275b5afec911)"
+      - "USER:Job/Read:Krithi.KR@cloudzenix.com (1a1d8fe1-766f-4bcf-bf70-53f1354f4529)"
+      - "USER:Job/Read:Sreehari.Reddy@cloudzenix.com (0d81d81b-4b08-46b6-b9ab-148cd8c34bfb)"
+      - "USER:Job/Read:Vinayak.Shivasimpi@cloudzenix.com (b314d49e-10f0-45ff-857b-8b032a607031)"
+      - "USER:Job/Read:karthik.Venkataramaiah@cloudzenix.com (9b202f47-ef7c-469d-9ff8-5d37e11be47e)"
+      - "USER:Job/Read:karthikd.gowda@cloudzenix.com (8dd888fb-6c61-4fd5-b0b9-c480508749f8)"
+      - "USER:Job/Read:renuka.prasad@cloudzenix.com (ef49ced8-7545-40b2-ba31-a2e3c39aed1d)"
+      - "USER:Job/Read:vijay.nimbalkar@cloudzenix.com (c3559211-0ed1-4f90-9ff4-cdd7b054287e)"
+      - "USER:Overall/Administer:Sreekanth.reddy@cloudzenix.com (e6dbaf6f-fc1e-47ac-b2cd-b59a44638d22)"
+      - "USER:Overall/Administer:karthik.marappan@cloudzenix.com (65e734e0-5c4d-446c-8719-e2bbb818b671)"
+      - "USER:Overall/Administer:naveen.raghunandan@cloudzenix.com (2c4c70e2-3903-42fe-b43c-84584e5ce17e)"
+      - "USER:Overall/Administer:prasanna.venkataswamy@cloudzenix.com (059caa6d-d817-49a7-829d-d7f417f27b4d)"
+      - "USER:Overall/Administer:renuka.prasad@cloudzenix.com (ef49ced8-7545-40b2-ba31-a2e3c39aed1d)"
+      - "USER:Overall/Read:Anand.Mahurakar@cloudzenix.com (b6617e34-2264-40a4-8fb6-275b5afec911)"
+      - "USER:Overall/Read:Krithi.KR@cloudzenix.com (1a1d8fe1-766f-4bcf-bf70-53f1354f4529)"
+      - "USER:Overall/Read:Prashant.Kumar@cloudzenix.com (45164ee4-2584-4201-936c-93375449146c)"
+      - "USER:Overall/Read:Sreehari.Reddy@cloudzenix.com (0d81d81b-4b08-46b6-b9ab-148cd8c34bfb)"
+      - "USER:Overall/Read:Vinayak.Shivasimpi@cloudzenix.com (b314d49e-10f0-45ff-857b-8b032a607031)"
+      - "USER:Overall/Read:karthik.Venkataramaiah@cloudzenix.com (9b202f47-ef7c-469d-9ff8-5d37e11be47e)"
+      - "USER:Overall/Read:karthikd.gowda@cloudzenix.com (8dd888fb-6c61-4fd5-b0b9-c480508749f8)"
+      - "USER:Overall/Read:naveen.raghunandan@cloudzenix.com (2c4c70e2-3903-42fe-b43c-84584e5ce17e)"
+      - "USER:Overall/Read:renuka.prasad@cloudzenix.com (ef49ced8-7545-40b2-ba31-a2e3c39aed1d)"
+      - "USER:Overall/Read:vijay.nimbalkar@cloudzenix.com (c3559211-0ed1-4f90-9ff4-cdd7b054287e)"
+      - "USER:View/Configure:Krithi.KR@cloudzenix.com (1a1d8fe1-766f-4bcf-bf70-53f1354f4529)"
+      - "USER:View/Configure:karthik.Venkataramaiah@cloudzenix.com (9b202f47-ef7c-469d-9ff8-5d37e11be47e)"
+  clouds:
+  - kubernetes:
+      containerCap: 10
+      containerCapStr: "10"
+      credentialsId: "credentialsId"
+      jenkinsUrl: "https://jenkins.cloudzenix.online/"
+      name: "kubernetes"
+      serverUrl: "https://AE21306665E0698287A0C60BB1BA962B.gr7.us-east-1.eks.amazonaws.com"
+      templates:
+      - id: "0e63e06f-7bc2-4d7c-a44e-887b0769069f"
+        label: "Maturity-Model"
+        name: "test-pod"
+        yamlMergeStrategy: "override"
+  crumbIssuer:
+    standard:
+      excludeClientIPFromCrumb: false
+  disableRememberMe: true
+  disabledAdministrativeMonitors:
+  - "io.jenkins.plugins.opentelemetry.administrativemonitor.ObservabilityBackendCheckAdministrativeMonitor"
+  - "jenkins.security.QueueItemAuthenticatorMonitor"
+  - "jenkins.diagnostics.ControllerExecutorsAgents"
+  labelAtoms:
+  - name: "Maturity-Model"
+  - name: "built-in"
+  - name: "deployment1"
+  - name: "qa-environment"
+  markupFormatter:
+    rawHtml:
+      disableSyntaxHighlighting: false
+  mode: NORMAL
+  myViewsTabBar: "standard"
+  nodes:
+  - permanent:
+      launcher:
+        ssh:
+          credentialsId: "slave"
+          host: "54.86.172.149"
+          port: 22
+          sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+      name: "deployment1"
+      remoteFS: "/var/lib"
+      retentionStrategy: "always"
+  - permanent:
+      launcher:
+        ssh:
+          credentialsId: "slave-config"
+          host: "10.0.0.154"
+          port: 22
+          sshHostKeyVerificationStrategy: "nonVerifyingKeyVerificationStrategy"
+      name: "qa-environment"
+      nodeDescription: "qa"
+      remoteFS: "/var/lib/jenkins"
+      retentionStrategy: "always"
+  numExecutors: 2
+  primaryView:
+    all:
+      name: "all"
+  projectNamingStrategy: "standard"
+  quietPeriod: 5
+  remotingSecurity:
+    enabled: true
+  scmCheckoutRetryCount: 0
+  securityRealm:
+    azure:
+      cacheDuration: 3600
+      clientId: "****"
+      clientSecret: "{AQAAABAAAAAweFGmUX/uV69HsO7Sc7Jt8EuqN17sKcWm97y5cA4vzDBQtNxR2jK7xarSmPPATbUJ0R0AxEywM2w2w332e8q9AA==}"
+      tenant: "****"
+  slaveAgentPort: -1
+  updateCenter:
+    sites:
+    - id: "default"
+      url: "https://updates.jenkins.io/update-center.json"
+  views:
+  - list:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "buildButton"
+      jobNames:
+      - "dev-cz-poc-Ongoing/OC_ConfigMap_Implementation"
+      name: "OC_configmap"
+  - list:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "buildButton"
+      jobNames:
+      - "dev-cz-poc-Ongoing/BB_Jenkins_tag_qa"
+      - "dev-cz-poc-Ongoing/PROD_PIPELINE_TEST_cdk_ecr"
+      name: "PROD_PIPELINES"
+  - list:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "buildButton"
+      jobNames:
+      - "dev-cz-poc-Ongoing/BB_Jenkins_tag_qa"
+      - "dev-cz-poc-Ongoing/Jenkins_Jira"
+      - "dev-cz-poc-Ongoing/QA_PIPELINE_TEST_cdk_ecr"
+      name: "QA_PIPELINES"
+  - list:
+      columns:
+      - "status"
+      - "weather"
+      - "jobName"
+      - "lastSuccess"
+      - "lastFailure"
+      - "lastDuration"
+      - "buildButton"
+      name: "Test-pipelines"
+  - all:
+      name: "all"
+  viewsTabBar: "standard"
+globalCredentialsConfiguration:
+  configuration:
+    providerFilter: "none"
+    typeFilter: "none"
+security:
+  apiToken:
+    creationOfLegacyTokenEnabled: false
+    tokenGenerationOnCreationEnabled: false
+    usageStatisticsEnabled: true
+  gitHostKeyVerificationConfiguration:
+    sshHostKeyVerificationStrategy: "knownHostsFileVerificationStrategy"
+  globalJobDslSecurityConfiguration:
+    useScriptSecurity: true
+  sSHD:
+    port: -1
+  scriptApproval:
+    approvedScriptHashes:
+    - "017d0db438428731cd600b6ebda805065433520f"
+    - "4eccb00efe2eec1a4e32cea58a0c2b75243e5114"
+    approvedSignatures:
+    - "method org.jenkinsci.plugins.workflow.steps.FlowInterruptedException getCauses"
+unclassified:
+  artifactoryBuilder:
+    jfrogInstances:
+    - artifactoryUrl: "https://cloudzenix.jfrog.io/artifactory"
+      bypassProxy: false
+      connectionRetry: 3
+      deployerCredentialsConfig:
+        overridingCredentials: false
+        password: "{AQAAABAAAAAQvDHm/NCdHQ2jYw2HSjinkpmAZJD9Cn7nqJLShQhTK8o=}"
+        username: "****"
+      deploymentThreads: 3
+      distributionUrl: "https://cloudzenix.jfrog.io/distribution"
+      instanceId: "Jfrog"
+      platformUrl: "https://cloudzenix.jfrog.io"
+      timeout: 300
+    jfrogPipelinesServer:
+      bypassProxy: false
+      connectionRetries: 3
+      credentialsConfig:
+        ignoreCredentialPluginDisabled: true
+        overridingCredentials: false
+        password: "{AQAAABAAAAAQ6PzbKHTqWIxDHCDj5+n2NR2ZPpIG4jUC0JNlhyz4v9Y=}"
+        username: "****"
+      timeout: 300
+    useCredentialsPlugin: false
+  bitBucketPPRPluginConfig:
+    hookUrl: "https://bitbucket.org/"
+  buildDiscarders:
+    configuredBuildDiscarders:
+    - "jobBuildDiscarder"
+  buildStepOperation:
+    enabled: false
+  buildUserVars:
+    allBuilds: false
+  config:
+    password: "{AQAAABAAAAAQyCE4vB3wpWCP5p9X5FLOkn3wK21dx3NP6upfQfW3MQg=}"
+    pattern: "FOO-,BAR-"
+    timeout: 10
+    verboseLogging: false
+  couchStatsConfig:
+    document: "development"
+    password: "{AQAAABAAAAAQEZAiUZWu3Sr5oaXPLlSnDalXerr3hjTccTccEnlTjQA=}"
+    url: "https://couchdb.cloudzenix.online/"
+    username: "cloudzenix"
+  email-ext:
+    addAccounts:
+    - address: "sreekanthm747@gmail.com"
+      smtpHost: "smtp.gmail.com"
+      useSsl: true
+    adminRequiredForTemplateTesting: true
+    allowUnregisteredEnabled: true
+    charset: "UTF-8"
+    debugMode: true
+    defaultBody: |-
+      $PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS:
+
+      Check console output at $BUILD_URL to view the results.
+    defaultContentType: "text/html"
+    defaultSubject: "$PROJECT_NAME - Build # $BUILD_NUMBER - $BUILD_STATUS!"
+    defaultSuffix: "@gmail.com"
+    defaultTriggerIds:
+    - "hudson.plugins.emailext.plugins.trigger.AlwaysTrigger"
+    mailAccount:
+      credentialsId: "mymailid"
+      smtpHost: "smtp.gmail.com"
+      smtpPort: "465"
+      useSsl: true
+    maxAttachmentSize: -1
+    maxAttachmentSizeMb: -1
+    precedenceBulk: false
+    watchingEnabled: true
+  fingerprints:
+    fingerprintCleanupDisabled: false
+    storage: "file"
+  gitHubConfiguration:
+    apiRateLimitChecker: ThrottleForNormalize
+  gitHubPluginConfig:
+    hookUrl: "https://jenkins.cloudzenix.online/github-webhook/"
+  gitLabConnectionConfig:
+    connections:
+    - clientBuilderId: "autodetect"
+      connectionTimeout: 10
+      ignoreCertificateErrors: false
+      readTimeout: 10
+    useAuthenticatedEndpoint: true
+  gitLabServers:
+    servers:
+    - name: "default"
+      secretToken: "{AQAAABAAAAAQhNImSHRE7usEcEYZwqFvL166MZnHj+rpA20Eygm7lyk=}"
+      serverUrl: "https://gitlab.com"
+  gitSCM:
+    addGitTagAction: false
+    allowSecondFetch: false
+    createAccountBasedOnEmail: false
+    disableGitToolChooser: false
+    hideCredentials: false
+    showEntireCommitSummaryInChanges: false
+    useExistingAccountWithSameEmail: false
+  globalNexusConfiguration:
+    instanceId: "7b553635543f4cabb403e7597a9cc0ce"
+    nxrmConfigs:
+    - nxrm3Configuration:
+        credentialsId: "nexus_cred"
+        displayName: "Nexus"
+        id: "Nexus"
+        internalId: "85fc9bfb-16b7-4b9a-a844-cd20b1d6cd63"
+        serverUrl: "https://nexus.cloudzenix.online/"
+  injectionConfig:
+    allowUntrusted: false
+    enabled: false
+    injectCcudExtension: false
+    injectMavenExtension: false
+  ivyBuildTrigger:
+    extendedVersionMatching: false
+  jiraCloudPluginConfig:
+    autoBuildsEnabled: false
+    autoDeploymentsEnabled: false
+    autoDeploymentsRegex: "^deploy to (?<envName>.*)$"
+    debugLogging: false
+    sites: |-
+      FAILED TO EXPORT
+      com.atlassian.jira.cloud.jenkins.config.JiraCloudPluginConfig#sites: java.lang.NullPointerException
+        at java.base/java.util.Objects.requireNonNull(Objects.java:221)
+        at com.atlassian.jira.cloud.jenkins.config.JiraCloudSiteConfig.<init>(JiraCloudSiteConfig.java:53)
+      Caused: java.lang.reflect.InvocationTargetException
+        at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+        at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+        at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+        at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+        at io.jenkins.plugins.casc.impl.configurators.DataBoundConfigurator.describe(DataBoundConfigurator.java:308)
+        at io.jenkins.plugins.casc.Attribute._describe(Attribute.java:328)
+        at io.jenkins.plugins.casc.Attribute.describe(Attribute.java:257)
+        at io.jenkins.plugins.casc.Configurator.describe(Configurator.java:183)
+        at io.jenkins.plugins.casc.impl.configurators.GlobalConfigurationCategoryConfigurator.describe(GlobalConfigurationCategoryConfigurator.java:114)
+        at io.jenkins.plugins.casc.impl.configurators.GlobalConfigurationCategoryConfigurator.lambda$describe$3(GlobalConfigurationCategoryConfigurator.java:107)
+        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:183)
+        at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177)
+        at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133)
+        at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1801)
+        at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
+        at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
+        at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:150)
+        at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:173)
+        at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234)
+        at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:497)
+        at io.jenkins.plugins.casc.impl.configurators.GlobalConfigurationCategoryConfigurator.describe(GlobalConfigurationCategoryConfigurator.java:107)
+        at io.jenkins.plugins.casc.impl.configurators.GlobalConfigurationCategoryConfigurator.describe(GlobalConfigurationCategoryConfigurator.java:33)
+  jiraGlobalConfiguration:
+    sites:
+    - alternativeUrl: "https://cloudzenix.atlassian.net/"
+      credentialsId: "Jiracerd"
+      updateJiraIssueForAllStatus: true
+      url: "https://cloudzenix.atlassian.net/"
+  jiraTriggerGlobalConfiguration:
+    jiraCommentReply: true
+    jiraPassword: "{AQAAABAAAAAgqxceByEAvc2H97yDzFA2zRB31T+5H3bJXDG4RpNMUU4wRnxtfl98vv+aRKhjCeSj}"
+    jiraRootUrl: "https://cloudzenix.atlassian.net/"
+    jiraUsername: "sathish.kumar@cloudzenix.com"
+  junitTestResultStorage:
+    storage: "file"
+  location:
+    adminAddress: "sathish.kumar@cloudzenix.com"
+    url: "https://jenkins.cloudzenix.online/"
+  mailer:
+    authentication:
+      password: "{AQAAABAAAAAQdl027f/F/8X+3JuK1BAMwPjZ8xoQf1zeDPIMBFJpvmI=}"
+      username: "sreekanthm747@gmail.com"
+    charset: "UTF-8"
+    defaultSuffix: "@gmail.com"
+    replyToAddress: "sreekanthm747@gmail.com"
+    smtpHost: "smtp.gmail.com"
+    smtpPort: "465"
+    useSsl: true
+    useTls: false
+  mavenModuleSet:
+    localRepository: "default"
+  openTelemetry:
+    authentication:
+      otlpHeaderAuthentication:
+        headerName: "api-key"
+        headerValueId: "newrelickey"
+    disabledResourceProviders: "io.opentelemetry.sdk.extension.resources.ProcessResourceProvider"
+    endpoint: "https://otlp.nr-data.net:4317"
+    exportOtelConfigurationAsEnvironmentVariables: false
+    ignoredSteps: "dir,echo,isUnix,pwd,properties"
+    serviceName: "jenkins"
+    serviceNamespace: "jenkins"
+  pluginImpl:
+    enableCredentialsFromNode: false
+  pollSCM:
+    pollingThreadCount: 10
+  slackNotifier:
+    botUser: true
+    room: "codepipeline"
+    sendAsText: false
+    teamDomain: "cloudzenix"
+    tokenCredentialId: "jenkins-slackbot"
+  sonarGlobalConfiguration:
+    buildWrapperEnabled: false
+    installations:
+    - credentialsId: "Sonarsert"
+      name: "SonarScanner"
+      serverUrl: "https://sonar.cloudzenix.online"
+      triggers:
+        skipScmCause: false
+        skipUpstreamCause: false
+  sshPublisher:
+    commonConfig:
+      disableAllExec: false
+      encryptedPassphrase: "{AQAAABAAAAAQ90WC8pkKVS3gQb0/Hp1JkITX/i7cHSltM4/SnrktD0M=}"
+  timestamper:
+    allPipelines: false
+    elapsedTimeFormat: "'<b>'HH:mm:ss.S'</b> '"
+    systemTimeFormat: "'<b>'HH:mm:ss'</b> '"
+  whitelist:
+    enabled: false
+tool:
+  git:
+    installations:
+    - home: "git"
+      name: "Default"
+  jdk:
+    installations:
+    - home: "/opt/jdk-17.0.2/"
+      name: "java"
+  liquibaseInstallation:
+    installations:
+    - name: "liquibase"
+      properties:
+      - installSource:
+          installers:
+          - liquibaseInstaller:
+              id: "maven 'maven3.8.5'"
+  maven:
+    installations:
+    - name: "maven3.8.5"
+      properties:
+      - installSource:
+          installers:
+          - maven:
+              id: "3.8.5"
+  mavenGlobalConfig:
+    globalSettingsProvider: "standard"
+    settingsProvider: "standard"
+  snyk:
+    installations:
+    - name: "Snyk"
+      properties:
+      - installSource:
+          installers:
+          - snykInstaller:
+              platform: AUTO
+              updatePolicyIntervalHours: 24
+              version: "latest"
+  sonarRunnerInstallation:
+    installations:
+    - name: "SonarScanner"
+      properties:
+      - installSource:
+          installers:
+          - sonarRunnerInstaller:
+              id: "4.7.0.2747"
