@@ -19,7 +19,6 @@ jobs:
                 namespace: admin/education/
                 exportToken: true
                 secrets: |
-                    /cubbyhole/my-secret my-token  | MY-TOKE ;
-                    /cubbyhole/my-secret my-value  | MY-VALU
-                    
+                    /cubbyhole/my-secret my-token  | MY-TOKEN ;
+                    /cubbyhole/my-secret my-value  | MY-VALUE                
            
