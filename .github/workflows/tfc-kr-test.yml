@@ -23,22 +23,20 @@ jobs:
                   vault login hvs.CAESIMbMeLQjosN06RUVpPqxugQWcBLvcTTtQHKjlHGHXUB7GicKImh2cy5TVVR4TjBjdm1DTDZ0TGJuOXBDVWxTODIuVHFIZWkQuFY
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
-                  
+                  #vault namespace create education
 
-                  vault namespace create -namespace=admin/education 
-                  
                  
-                  echo "path "sys/namespaces/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" > edu-admin.hcl
-                  echo "path "sys/policies/acl/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
-                  echo "path "sys/mounts/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
-                  echo "path "sys/mounts" {capabilities = [ "read" ]}" >> edu-admin.hcl
-                  echo "path "identity/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
-                  echo "path "auth/token/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
-                  echo "path "edu-secret/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
+                  #echo "path "sys/namespaces/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" > edu-admin.hcl
+                  #echo "path "sys/policies/acl/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
+                  #echo "path "sys/mounts/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
+                  #echo "path "sys/mounts" {capabilities = [ "read" ]}" >> edu-admin.hcl
+                  #echo "path "identity/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
+                  #echo "path "auth/token/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
+                  #echo "path "edu-secret/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
                   export VAULT_NAMESPACE=admin/education
-                  vault policy write -namespace=education edu-admin edu-admin.hcl
+                  #vault policy write -namespace=education edu-admin edu-admin.hcl
                   export VAULT_NAMESPACE=admin/education
-                  vault kv put -mount=kv JFrog username=renuka.prasad@cloudzenix.com password=Prasad@123 url=https://cloudzenix.jfrog.io/
+                  vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
                          
           
             - name: Import Secrets
