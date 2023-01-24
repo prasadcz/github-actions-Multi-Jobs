@@ -17,8 +17,11 @@ jobs:
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: |
-                    /cubbyhole/jfrog username | USERNAME ;
-                    /cubbyhole/jfrog password | PASSWORD 
+                   ## /cubbyhole/jfrog username | USERNAME ;
+                   ## /cubbyhole/jfrog password | PASSWORD
+                   /kv/JFrog username | USERNAME ;
+                   /kv/JFrog password | PASSWORD
+                   
             - name: Unit Test
               run: |
                   mkdir -p ~/.aws
