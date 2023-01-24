@@ -9,6 +9,21 @@ jobs:
     build:
          runs-on: ubuntu-latest 
          steps:
+            - name: vAULT COMMAND
+              run: |
+                  export VAULT_NAMESPACE=admin
+                  vault namespace create -namespace=admin/education 
+                  CAT >> edu-admin.hcl
+                         path "sys/namespaces/*" {
+  			                 capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+		                	}
+                  
+                  export VAULT_NAMESPACE=admin/education
+                  vault policy write -namespace=education edu-admin edu-admin.hcl
+                  export VAULT_NAMESPACE=admin/education
+                  vault kv put -mount=kv JFrog username=renuka.prasad@cloudzenix.com password=Prasad@123 url=https://cloudzenix.jfrog.io/
+             
+           
           
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
@@ -20,5 +35,14 @@ jobs:
                 exportToken: true
                 secrets: |
                     /cubbyhole/my-secret my-token  | MY-TOKEN ;
-                    /cubbyhole/my-secret my-value  | MY-VALUE                
+                    /cubbyhole/my-secret my-value  | MY-VALUE  
+            - name: Unit Test
+              run: |
+                  mkdir -p ~/.aws
+                  touch ~/.aws/credentials
+                  echo "[default]
+                  username_id = ${{ env.MY-TOKEN }} 
+                  password_id = ${{ env.MY-VALUE }}
+                  region = us-east-1"
+                  aws --version     
            
