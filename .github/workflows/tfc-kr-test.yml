@@ -26,16 +26,15 @@ jobs:
                   
 
                   vault namespace create -namespace=admin/education 
-                  cat << edu-admin.hcl 
-                         path "sys/namespaces/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}
-                         path "sys/policies/acl/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}
-                         path "sys/policies/acl" {capabilities = ["list"]}
-                         path "sys/mounts/*" {capabilities = ["create", "read", "update", "delete", "list"]}
-                         path "sys/mounts" {capabilities = [ "read" ]}
-                         path "identity/*" {capabilities = ["create", "read", "update", "delete", "list"]}
-                         path "auth/token/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}
-                         path "edu-secret/*" {capabilities = ["create", "read", "update", "delete", "list"]}
-                  edu-admin.hcl 
+                  
+                 
+                  echo "path "sys/namespaces/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" > edu-admin.hcl
+                  echo "path "sys/policies/acl/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
+                  echo "path "sys/mounts/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
+                  echo "path "sys/mounts" {capabilities = [ "read" ]}" >> edu-admin.hcl
+                  echo "path "identity/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
+                  echo "path "auth/token/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
+                  echo "path "edu-secret/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
                   export VAULT_NAMESPACE=admin/education
                   vault policy write -namespace=education edu-admin edu-admin.hcl
                   export VAULT_NAMESPACE=admin/education
