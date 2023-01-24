@@ -15,8 +15,8 @@ jobs:
                   vault namespace create -namespace=admin/education 
                   CAT >> edu-admin.hcl
                          path "sys/namespaces/*" {
-  			                 capabilities = ["create", "read", "update", "delete", "list", "sudo"]
-		                	}
+  			 capabilities = ["create", "read", "update", "delete", "list", "sudo"]
+	               	}
                   
                   export VAULT_NAMESPACE=admin/education
                   vault policy write -namespace=education edu-admin edu-admin.hcl
