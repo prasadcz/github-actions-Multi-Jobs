@@ -17,8 +17,8 @@ jobs:
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: | 
-                   /kv/JFrog username | USERNAME ;
-                   /kv/JFrog password | PASSWORD
+                   /secret/data/kv/JFrog username | USERNAME ;
+                   /secret/data/kv/JFrog password | PASSWORD
                    
             - name: Unit Test
               run: |
