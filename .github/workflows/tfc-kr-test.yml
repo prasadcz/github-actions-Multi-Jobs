@@ -9,7 +9,7 @@ jobs:
     build:
          runs-on: ubuntu-latest 
          steps:
-            - name: vAULT COMMAND
+            - name: VAULT COMMAND
               run: |
                   export VAULT_NAMESPACE=admin
                   vault namespace create -namespace=admin/education 
