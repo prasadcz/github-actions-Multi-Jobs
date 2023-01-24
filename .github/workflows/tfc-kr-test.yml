@@ -17,8 +17,10 @@ jobs:
                   
                   export VAULT_ADDR=https://vault-cluster-public-vault-576b5917.b038600b.z1.hashicorp.cloud:8200/
                   export VAULT_TOKEN=hvs.CAESIOxAihjWD2qNMn6jLknWg0kCfIKHe9fsOac965V2QLpGGicKImh2cy56NlJFNk95bU5jcVc0OWxZd0RqMnd6VGkuVHFIZWkQ30Y
+                  export VAULT_NAMESPACE=admin
                   vault login hvs.CAESIOxAihjWD2qNMn6jLknWg0kCfIKHe9fsOac965V2QLpGGicKImh2cy56NlJFNk95bU5jcVc0OWxZd0RqMnd6VGkuVHFIZWkQ30Y
-
+                  export VAULT_NAMESPACE=admin
+                  echo "vault login success"
                   
 
                   vault namespace create -namespace=admin/education 
@@ -31,7 +33,11 @@ jobs:
                          path "identity/*" {capabilities = ["create", "read", "update", "delete", "list"]}
                          path "auth/token/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}
                          path "edu-secret/*" {capabilities = ["create", "read", "update", "delete", "list"]}
-                  edu-admin.hcl    
+                  edu-admin.hcl 
+                  export VAULT_NAMESPACE=admin/education
+                  vault policy write -namespace=education edu-admin edu-admin.hcl
+                  export VAULT_NAMESPACE=admin/education
+                  vault kv put -mount=kv JFrog username=renuka.prasad@cloudzenix.com password=Prasad@123 url=https://cloudzenix.jfrog.io/
                          
           
             - name: Import Secrets
