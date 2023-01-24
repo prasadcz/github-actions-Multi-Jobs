@@ -26,7 +26,7 @@ jobs:
                   
 
                   vault namespace create -namespace=admin/education 
-                  cat>> edu-admin.hcl 
+                  cat << edu-admin.hcl 
                          path "sys/namespaces/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}
                          path "sys/policies/acl/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}
                          path "sys/policies/acl" {capabilities = ["list"]}
