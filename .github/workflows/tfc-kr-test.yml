@@ -15,13 +15,15 @@ jobs:
                   vault namespace create -namespace=admin/education 
                   CAT >> edu-admin.hcl
                          path "sys/namespaces/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}
-                  
-                  export VAULT_NAMESPACE=admin/education
-                  vault policy write -namespace=education edu-admin edu-admin.hcl
-                  export VAULT_NAMESPACE=admin/education
-                  vault kv put -mount=kv JFrog username=renuka.prasad@cloudzenix.com password=Prasad@123 url=https://cloudzenix.jfrog.io/
-             
-           
+                         path "sys/policies/acl/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}
+                         path "sys/policies/acl" {capabilities = ["list"]}
+                         path "sys/mounts/*" {capabilities = ["create", "read", "update", "delete", "list"]}
+                         path "sys/mounts" {capabilities = [ "read" ]}
+                         path "identity/*" {capabilities = ["create", "read", "update", "delete", "list"]}
+                         path "auth/token/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}
+                         path "edu-secret/*" {capabilities = ["create", "read", "update", "delete", "list"]}
+                         
+                         
           
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
