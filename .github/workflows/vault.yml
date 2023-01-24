@@ -13,62 +13,21 @@ jobs:
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
               with:
-                url: http://3.93.191.220:8200/
+                url: http://3.223.93.156:8200/
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: |
-                    /cubbyhole/jfrog username | USERNAME ;
-                    /cubbyhole/jfrog password | PASSWORD 
+                    /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
+                    /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
             - name: Unit Test
               run: |
                   mkdir -p ~/.aws
                   touch ~/.aws/credentials
                   echo "[default]
-                  username_id = ${{ env.USERNAME }} 
-                  password_id = ${{ env.PASSWORD }}
+                  aws_access_key_id = ${{ env.AWS_ACCESS_KEY_ID }} 
+                  aws_secret_access_key = ${{ env.AWS_SECRET_ACCESS_KEY }}
                   region = us-east-1"
-                  aws --version      
-    
-    #builds:
-     #    runs-on: ubuntu-latest
-      #   steps: 
-       #     - name: Unit Test
-        #      run: |
-         #         mkdir -p ~/.aws
-          #        touch ~/.aws/credentials
+                  aws --version   
 
-           #       echo "[default]
-            #      aws_access_key_id = ${{ AWS_ACCESS_KEY_ID }}
-             #     aws_secret_access_key = ${{ AWS_SECRET_ACCESS_KEY  }}
-              #    region = us-east-1
-                 
-                  
-        
-        
-        #steps:
-          
-          #  - id: install-aws-cli
-          #    uses: unfor19/install-aws-cli-action@v1
-          #    with:
-          #      version: 2     # default
-          #      verbose: false # default
-          #      arch: amd64    # allowed values: amd64, arm64
-          #      rootdir: "PWD"    # defaults to "PWD"
-           #     workdir: "PWD/unfor19-awscli"    # defaults to "PWD/unfor19-awscli"
-            #    run: |
-            #         /usr/local/bin/aws --version
-     #env:
-               #  Greeting: AWS_SECRET_ACCESS_KEY
-                 
-    #build1:
-     #       runs-on: ubuntu-latest 
-     #       steps:
-     #        - name: "Say Hello Mona it's Monday"
-     #          run: echo "$Greeting First_Name. Today is DAY_OF_WEEK!"
-                
 
-               
-                
-
-              
      
