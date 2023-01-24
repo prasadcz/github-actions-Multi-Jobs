@@ -36,27 +36,30 @@ jobs:
                   export VAULT_NAMESPACE=admin/education
                   #vault policy write -namespace=education edu-admin edu-admin.hcl
                   export VAULT_NAMESPACE=admin/education
-                  vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
+                  #vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
+                  
+                  
                          
           
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
               with:
                 url: https://vault-cluster-public-vault-576b5917.b038600b.z1.hashicorp.cloud:8200/
-                token: ${{ secrets.TFCVAULT }}
-                caCertificate: ${{ secrets.VAULT_CA_CERT_HCP }}
+               # token: ${{ secrets.TFCVAULT }}
+                token: hvs.CAESIMbMeLQjosN06RUVpPqxugQWcBLvcTTtQHKjlHGHXUB7GicKImh2cy5TVVR4TjBjdm1DTDZ0TGJuOXBDVWxTODIuVHFIZWkQuFY
+                #caCertificate: ${{ secrets.VAULT_CA_CERT_HCP }}
                 namespace: admin/education/
                 exportToken: true
                 secrets: |
-                    /cubbyhole/my-secret my-token  | MY-TOKEN ;
-                    /cubbyhole/my-secret my-value  | MY-VALUE  
+                    /kv/testjfrog username  | USERNAME ;
+                    /kv/testjfrog password  | PASSWORD 
             - name: Unit Test
               run: |
                   mkdir -p ~/.aws
                   touch ~/.aws/credentials
                   echo "[default]
-                  username_id = ${{ env.MY-TOKEN }} 
-                  password_id = ${{ env.MY-VALUE }}
+                  username_id = ${{ env.USERNAME}} 
+                  password_id = ${{ env.PASSWORD  }}
                   region = us-east-1"
                   aws --version     
            
