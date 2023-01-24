@@ -17,8 +17,8 @@ jobs:
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: |
-                     secret/data/ci/kv username | USERNAME ;
-                     secret/data/ci/kv password | PASSWORD 
+                    /cubbyhole/jfrog username | USERNAME ;
+                    /cubbyhole/jfrog password | PASSWORD 
             - name: Unit Test
               run: |
                   mkdir -p ~/.aws
@@ -28,9 +28,7 @@ jobs:
                   password_id = ${{ env.PASSWORD }}
                   region = us-east-1"
                   aws --version      
-
-
-
+    
 
 
 
