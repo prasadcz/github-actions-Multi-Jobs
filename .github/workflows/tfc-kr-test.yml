@@ -14,10 +14,12 @@ jobs:
                   curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
                   sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
                   sudo apt install vault
-                  
+                  sudo systemctl start vault.service
+                  sudo systemctl status vault.service
                   export VAULT_ADDR=https://vault-cluster-public-vault-576b5917.b038600b.z1.hashicorp.cloud:8200/
                   export VAULT_TOKEN=hvs.CAESIOxAihjWD2qNMn6jLknWg0kCfIKHe9fsOac965V2QLpGGicKImh2cy56NlJFNk95bU5jcVc0OWxZd0RqMnd6VGkuVHFIZWkQ30Y
                   export VAULT_NAMESPACE=admin
+                  vault version
                   vault login hvs.CAESIOxAihjWD2qNMn6jLknWg0kCfIKHe9fsOac965V2QLpGGicKImh2cy56NlJFNk95bU5jcVc0OWxZd0RqMnd6VGkuVHFIZWkQ30Y
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
