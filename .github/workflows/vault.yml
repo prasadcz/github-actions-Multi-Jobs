@@ -17,8 +17,8 @@ jobs:
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: |
-                     secret/data/ci username | USERNAME ;
-                     secret/data/ci password | PASSWORD 
+                     secret/data/ci/kv username | USERNAME ;
+                     secret/data/ci/kv password | PASSWORD 
             - name: Unit Test
               run: |
                   mkdir -p ~/.aws
