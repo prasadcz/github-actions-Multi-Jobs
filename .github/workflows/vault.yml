@@ -17,17 +17,28 @@ jobs:
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: |
-                    /cubbyhole/foo accesskey | AWS_ACCESS_KEY_ID ;
-                    /cubbyhole/foo secretkey | AWS_SECRET_ACCESS_KEY 
+                    /cubbyhole/jfrog username | USERNAME ;
+                    /cubbyhole/jfrog password | PASSWORD 
             - name: Unit Test
               run: |
                   mkdir -p ~/.aws
                   touch ~/.aws/credentials
                   echo "[default]
-                  aws_access_key_id = ${{ env.AWS_ACCESS_KEY_ID }} 
-                  aws_secret_access_key = ${{ env.AWS_SECRET_ACCESS_KEY }}
+                  username_id = ${{ env.USERNAME }} 
+                  password_id = ${{ env.PASSWORD }}
                   region = us-east-1"
-                  aws --version   
+                  aws --version      
 
 
-     
+
+
+
+
+
+
+
+
+
+
+
+
