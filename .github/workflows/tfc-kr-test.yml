@@ -13,13 +13,12 @@ jobs:
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
               with:
-                url: https://vault-cluster-public-vault-576b5917.b038600b.z1.hashicorp.cloud:8200/
+                url: https://portal.cloud.hashicorp.com/services/vault/vault-cluster?project_id=e0d0a913-bf69-4ade-8b8d-23fa910c9ddb
                 token: ${{ secrets.TFCVAULT }}
                 caCertificate: ${{ secrets.VAULT_CA_CERT_HCP }}
                 namespace: admin/education/
                 exportToken: true
                 secrets: |
-                    /cubbyhole/my-secret my-token  | AWS_ACCESS_KEY_ID ;
-                    /cubbyhole/my-secret my-value  | AWS_SECRET_ACCESS_KEY 
-                    
+                    /cubbyhole/my-secret my-token  | MY-TOKEN ;
+                    /cubbyhole/my-secret my-value  | MY-VALUE
            
