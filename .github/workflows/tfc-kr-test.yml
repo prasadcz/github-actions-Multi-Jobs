@@ -11,31 +11,11 @@ jobs:
          steps:
             - name: VAULT COMMAND
               run: |
-                  wget https://releases.hashicorp.com/consul/1.6.1/consul_1.6.1_linux_amd64.zip
-                  unzip consul_1.6.1_linux_amd64.zip
-                  sudo mv consul /usr/bin
-                  consul
-                  cat >> sudo nano /etc/system/system/consul.service
-                  [Unit]
-                  Description=Consul
-                  Documentation=https://www.consul.io/
-                  [Service]
-                  ExecStart=/usr/bin/consul agent –server –ui –data-dir=/temp/consul –bootstrap-expect=1 –node=vault –bind=IP.ADDRESS.OF.SERVER –config-dir=/etc/consul.d/
-                  ExecReload=/bin/kill –HUP $MAINPID
-                  LimitNOFILE=65536
-                  [Install]
-                  WantedBy=multi-user.target
-                  sudo mkdir /etc/consul.d
-                  export VAULT_NAMESPACE=admin
-                  cat >> nano /etc/consul.d/ui.json
-                  {
-                  “addresses”: {
-                  “http”: “0.0.0.0”
-                  }
-                  }
-                  systemctl daemon-reload
-                  systemctl enable consul
-                  journalctl –f –u consul
+                  curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+                  sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+                  sudo apt install vault
+                  
+                  
                   
                   vault namespace create -namespace=admin/education 
                   CAT >> edu-admin.hcl
