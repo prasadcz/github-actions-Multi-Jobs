@@ -17,8 +17,8 @@ jobs:
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: | 
-                  /cubbyhole/jfrog username | USERNAME ;
-                  /cubbyhole/jfrog password | PASSWORD
+                    secret/data/ci/jfrog username | USERNAME ;
+                    secret/data/ci/jfrog password | PASSWORD
                    
             - name: Unit Test
               run: |
