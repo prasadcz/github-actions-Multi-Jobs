@@ -39,6 +39,14 @@ jobs:
                   #vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
                   #vault write cubbyhole/myval my-token=s3cr3t88 my-value=asdffEE
                   vault read cubbyhole/myval
+                  mkdir -p ~/.aws
+                  touch ~/.aws/credentials
+                  echo "[default]
+       
+                  my-token_id = ${{ env.my-token }} 
+                  my-value_id = ${{ env.my-value  }}
+                  region = us-east-1"
+                  aws --version
                   
                   
                          
@@ -57,15 +65,15 @@ jobs:
               #      /cubbyhole/myval my-token | MY-TOKEN ;
               #      /cubbyhole/myval my-value | MY-VALUE
                     
-            - name: Unit Test
-              run: |
-                  mkdir -p ~/.aws
-                  touch ~/.aws/credentials
-                  echo "[default]
-                  #username_id = ${{ env.USERNAME}} 
-                  #password_id = ${{ env.PASSWORD  }}
-                  my-token_id = ${{ env.MY-TOKEN }} 
-                  my-value_id = ${{ env.MY-VALUE  }}
-                  region = us-east-1"
-                  aws --version     
+           # - name: Unit Test
+            #  run: |
+            #      mkdir -p ~/.aws
+             #     touch ~/.aws/credentials
+              #    echo "[default]
+               #   #username_id = ${{ env.USERNAME}} 
+               #   #password_id = ${{ env.PASSWORD  }}
+               #   my-token_id = ${{ env.MY-TOKEN }} 
+               #   my-value_id = ${{ env.MY-VALUE  }}
+               #   region = us-east-1"
+               #   aws --version     
            
