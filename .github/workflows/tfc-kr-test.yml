@@ -17,10 +17,10 @@ jobs:
                   sudo systemctl start vault.service
                   sudo systemctl status vault.service
                   export VAULT_ADDR=https://vault-cluster-public-vault-576b5917.b038600b.z1.hashicorp.cloud:8200/
-                  export VAULT_TOKEN=hvs.CAESIMbMeLQjosN06RUVpPqxugQWcBLvcTTtQHKjlHGHXUB7GicKImh2cy5TVVR4TjBjdm1DTDZ0TGJuOXBDVWxTODIuVHFIZWkQuFY
+                  export VAULT_TOKEN=hvs.CAESIGXkbE0hZJK53S4AADgG82ZTtByDRJbsOOhUUIpBaxEwGicKImh2cy5pY1VUbDhZeTlmd1A2UWs1c0tFa05OaG4uVHFIZWkQ-Hw
                  
                   vault version
-                  vault login hvs.CAESIMbMeLQjosN06RUVpPqxugQWcBLvcTTtQHKjlHGHXUB7GicKImh2cy5TVVR4TjBjdm1DTDZ0TGJuOXBDVWxTODIuVHFIZWkQuFY
+                  vault login hvs.CAESIGXkbE0hZJK53S4AADgG82ZTtByDRJbsOOhUUIpBaxEwGicKImh2cy5pY1VUbDhZeTlmd1A2UWs1c0tFa05OaG4uVHFIZWkQ-Hw
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
                   #vault namespace create education
