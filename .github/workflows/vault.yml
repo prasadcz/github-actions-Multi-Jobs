@@ -23,8 +23,8 @@ jobs:
                   vault login hvs.eETzcvWCkNIzZcSU8jVnhqtW
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
-                  #vault write cubbyhole/myval1 my-token=s3cr3t88 my-value=asdffEE
-                  vault kv put -mount=kv jfroggg user=worl pass=helloooo
+                  vault write cubbyhole/jfrog-cred username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
+              
 
           
             - name: Import Secrets
@@ -34,16 +34,16 @@ jobs:
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: | 
-                    /kv/jfroggg user | USER ;
-                    /kv/jfroggg pass | PASS
+                    /cubbyhole/jfrog-cred username | USERNAME ;
+                    /cubbyhole/jfrog-cred password | PASSWORD
                    
             - name: Unit Test
               run: |
                   mkdir -p ~/.aws
                   touch ~/.aws/credentials
                   echo "[default]
-                  user_id = ${{ env.USER }} 
-                  pass_id = ${{ env.PASS }}
+                  username_id = ${{ env.USERNAME }} 
+                  password_id = ${{ env.PASSWORD }}
                   region = us-east-1"
                   aws --version      
     
