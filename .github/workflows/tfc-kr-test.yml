@@ -52,10 +52,9 @@ jobs:
                 namespace: admin/education/
                 exportToken: true
                 secrets: |
-                    #/kv/testjfrog username  | USERNAME ;
-                    #/kv/testjfrog password  | PASSWORD
+                  
                     /cubbyhole/myval my-token | MY-TOKEN ;
-                     /cubbyhole/myval my-value | MY-VALUE
+                    /cubbyhole/myval my-value | MY-VALUE
                     
             - name: Unit Test
               run: |
