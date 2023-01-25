@@ -23,7 +23,9 @@ jobs:
                   vault login hvs.eETzcvWCkNIzZcSU8jVnhqtW
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
-                  vault write cubbyhole/myval1 my-token=s3cr3t88 my-value=asdffEE
+                  #vault write cubbyhole/myval1 my-token=s3cr3t88 my-value=asdffEE
+                  vault kv put -mount=kv jfroggg user=worl pass=helloooo
+
           
             - name: Import Secrets
               uses: hashicorp/vault-action@v2
@@ -32,16 +34,16 @@ jobs:
                 token: ${{ secrets.VAULT}}
                 caCertificate: ${{ secrets.VAULT_CA_CERT }}
                 secrets: | 
-                    /cubbyhole/myval1 my-token | MY-TOKEN ;
-                    /cubbyhole/myval1 my-value | MY-VALUE
+                    /kv/jfroggg user | USER ;
+                    /kv/jfroggg pass | PASS
                    
             - name: Unit Test
               run: |
                   mkdir -p ~/.aws
                   touch ~/.aws/credentials
                   echo "[default]
-                  my-token_id = ${{ env.MY-TOKEN }} 
-                  my-value_id = ${{ env.MY-VALUE }}
+                  user_id = ${{ env.USER }} 
+                  pass_id = ${{ env.PASS }}
                   region = us-east-1"
                   aws --version      
     
