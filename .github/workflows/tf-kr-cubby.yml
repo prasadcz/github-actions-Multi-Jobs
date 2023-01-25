@@ -44,14 +44,14 @@ jobs:
                   MY-TOKEN=(vault read cubbyhole/myval)
                   echo "$MY-TOKEN"
                   
-                  mkdir -p ~/.aws
-                  touch ~/.aws/credentials
-                  echo "[default]
+              #    mkdir -p ~/.aws
+              #    touch ~/.aws/credentials
+              #    echo "[default]
        
-                  my-token_id = ${{ env.my-token }} 
-                  my-value_id = ${{ env.my-value  }}
-                  region = us-east-1"
-                  aws --version
+               #   my-token_id = ${{ env.my-token }} 
+               #   my-value_id = ${{ env.my-value  }}
+                #  region = us-east-1"
+                 # aws --version
                   
                   
                          
