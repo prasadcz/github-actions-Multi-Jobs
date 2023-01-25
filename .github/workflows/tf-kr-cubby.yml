@@ -33,11 +33,12 @@ jobs:
                   #echo "path "identity/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
                   #echo "path "auth/token/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
                   #echo "path "edu-secret/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
-                  export VAULT_NAMESPACE=admin/education
+                  #export VAULT_NAMESPACE=admin/education
                   #vault policy write -namespace=education edu-admin edu-admin.hcl
                   export VAULT_NAMESPACE=admin/education
+                  echo "success"
                   #vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
-                  vault write cubbyhole/myval my-token=s3cr3t88 my-value=asdffEE
+                  #vault write cubbyhole/myval my-token=s3cr3t88 my-value=asdffEE
                   
                   MY-TOKEN=(vault read cubbyhole/myval)
                   echo "$MY-TOKEN"
