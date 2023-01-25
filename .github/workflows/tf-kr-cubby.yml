@@ -40,11 +40,13 @@ jobs:
                   #vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
                   #vault write cubbyhole/myval my-token=s3cr3t88 my-value=asdffEE
                   #vault read cubbyhole/myval
-                  echo "valt var"
-                  mytoken=$(vault read cubbyhole/myval | grep my-token)
+                  
+                  echo " print vault secrets"
+                  
+                  mytoken=$(vault read cubbyhole/myval | grep my-token | awk '{ print $2; })
                   echo "$mytoken"
                   
-                  myvalue=$(vault read cubbyhole/myval | grep my-value)
+                  myvalue=$(vault read cubbyhole/myval | grep my-value | awk '{ print $2; }')
                   echo "$myvalue"
                   
                   
