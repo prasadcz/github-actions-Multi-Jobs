@@ -41,7 +41,7 @@ jobs:
                   #vault write cubbyhole/myval my-token=s3cr3t88 my-value=asdffEE
                   vault read cubbyhole/myval
                   
-                  MY-TOKEN=(vault read cubbyhole/myval)
+                  MY-TOKEN=$(vault read cubbyhole/myval)
                   echo "$MY-TOKEN"
                   
               #    mkdir -p ~/.aws
