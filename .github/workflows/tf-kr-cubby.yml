@@ -38,15 +38,15 @@ jobs:
                   export VAULT_NAMESPACE=admin/education
                   echo "success"
                   #vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
-                  #vault write cubbyhole/myval my-token=s3cr3t88 my-value=asdffEE
+                  vault write cubbyhole/jfrog-cred username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
                   #vault read cubbyhole/myval
                   
                   echo "print vault secrets"
                   
-                  mytoken=$(vault read cubbyhole/myval | grep my-token | awk '{ print $2; }')
+                  mytoken=$(vault read cubbyhole/jfrog-cred | grep username | awk '{ print $2; }')
                   echo "$mytoken"
                   
-                  myvalue=$(vault read cubbyhole/myval | grep my-value | awk '{ print $2; }')
+                  myvalue=$(vault read cubbyhole/jfrog-cred | grep password | awk '{ print $2; }')
                   echo "$myvalue"
                   
                   
