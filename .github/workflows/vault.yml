@@ -23,7 +23,7 @@ jobs:
                   vault login hvs.eETzcvWCkNIzZcSU8jVnhqtW
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
-                  vault namespace create education
+                  #vault namespace create education
 
                   echo "path "sys/namespaces/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" > edu-admin.hcl
                   echo "path "sys/policies/acl/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
@@ -33,8 +33,8 @@ jobs:
                   echo "path "auth/token/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
                   echo "path "edu-secret/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
                   export VAULT_NAMESPACE=admin/education
-                  vault policy write -namespace=education edu-admin edu-admin.hcl
-                  export VAULT_NAMESPACE=admin/education
+                  vault policy write -namespace=admin edu-admin edu-admin.hcl
+                  #export VAULT_NAMESPACE=admin/education
                   #vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
                   vault write cubbyhole/myval my-token=s3cr3t88 my-value=asdffEE
           
