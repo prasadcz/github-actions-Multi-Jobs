@@ -23,7 +23,7 @@ jobs:
                   vault login hvs.eETzcvWCkNIzZcSU8jVnhqtW
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
-                  vault write cubbyhole/jfrog-cred1 username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
+                  #vault write cubbyhole/jfrog-cred1 username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
                   
                   echo "print vault secrets"
                   
@@ -36,25 +36,25 @@ jobs:
               
 
           
-            - name: Import Secrets
-              uses: hashicorp/vault-action@v2
-              with:
-                url: http://3.223.93.156:8200/
-                token: ${{ secrets.VAULT}}
-                caCertificate: ${{ secrets.VAULT_CA_CERT }}
-                secrets: | 
-                    /cubbyhole/jfrog-cred username | USERNAME ;
-                    /cubbyhole/jfrog-cred password | PASSWORD
+           # - name: Import Secrets
+           #   uses: hashicorp/vault-action@v2
+            #  with:
+            #    url: http://3.223.93.156:8200/
+             #   token: ${{ secrets.VAULT}}
+             #   caCertificate: ${{ secrets.VAULT_CA_CERT }}
+             #   secrets: | 
+              #      /cubbyhole/jfrog-cred username | USERNAME ;
+              #      /cubbyhole/jfrog-cred password | PASSWORD
                    
-            - name: Unit Test
-              run: |
-                  mkdir -p ~/.aws
-                  touch ~/.aws/credentials
-                  echo "[default]
-                  username_id = ${{ env.USERNAME }} 
-                  password_id = ${{ env.PASSWORD }}
-                  region = us-east-1"
-                  aws --version      
+            #- name: Unit Test
+            #  run: |
+             #     mkdir -p ~/.aws
+              #    touch ~/.aws/credentials
+              #    echo "[default]
+              #    username_id = ${{ env.USERNAME }} 
+              #    password_id = ${{ env.PASSWORD }}
+              #    region = us-east-1"
+              #    aws --version      
     
 
 
