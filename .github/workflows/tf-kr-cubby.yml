@@ -1,4 +1,4 @@
-name: tf-kr-vault
+name: tf-kr-cubby
 
 on:
   push:
