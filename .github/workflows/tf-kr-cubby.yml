@@ -23,8 +23,24 @@ jobs:
                   vault login hvs.CAESIGXkbE0hZJK53S4AADgG82ZTtByDRJbsOOhUUIpBaxEwGicKImh2cy5pY1VUbDhZeTlmd1A2UWs1c0tFa05OaG4uVHFIZWkQ-Hw
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
-                  #vault namespace create education
+                  #vault namespace create training
+                  vault policy write my-policy-$ns - << EOF
 
+                    path "${ns//\/}/" { 
+                    capabilities = [ "read", "create", "update", "delete", "sudo", "list" ] 
+                    }
+
+                    path "${ns//\/}/secret/data/*" {
+                    capabilities = ["deny"]
+                    }
+
+                    path "${ns//\/}/secret/metadata"
+
+                    {
+                   capabilities = [ "deny"]
+                    }
+
+                   EOF
                  
                   #echo "path "sys/namespaces/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" > edu-admin.hcl
                   #echo "path "sys/policies/acl/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
@@ -33,12 +49,12 @@ jobs:
                   #echo "path "identity/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
                   #echo "path "auth/token/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
                   #echo "path "edu-secret/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
-                  #export VAULT_NAMESPACE=admin/education
-                  #vault policy write -namespace=education edu-admin edu-admin.hcl
-                  export VAULT_NAMESPACE=admin/education
+                  export VAULT_NAMESPACE=admin/training
+                  vault policy write -namespace=admin/training train-admin train-admin.hcl
+                  export VAULT_NAMESPACE=admin/training
                   echo "success"
                   #vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
-                  #vault write cubbyhole/jfrog-cred username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
+                  vault write cubbyhole/jfrog-cred username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
                   #vault read cubbyhole/myval
                   
                   echo "print vault secrets"
