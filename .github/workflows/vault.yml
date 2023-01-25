@@ -23,7 +23,16 @@ jobs:
                   vault login hvs.eETzcvWCkNIzZcSU8jVnhqtW
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
-                  vault write cubbyhole/jfrog-cred username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
+                  vault write cubbyhole/jfrog-cred1 username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
+                  
+                  echo "print vault secrets"
+                  
+                  myval=$(vault read cubbyhole/jfrog-cred1 | grep username | awk '{ print $2; }')
+                  echo "$myval"
+                  
+                  mypass=$(vault read cubbyhole/jfrog-cred1 | grep password | awk '{ print $2; }')
+                  echo "$mypass"
+                  
               
 
           
