@@ -1,4 +1,4 @@
-name: tf-kr-cubby
+name: vault-cubby-1
 
 on:
   push:
@@ -20,51 +20,26 @@ jobs:
                   export VAULT_TOKEN=hvs.CAESIFOpEzkJuE-RQuQOjlolVbCJBPIIo7_EkCJqJGBW_htHGigKImh2cy42UExEZVA0NEZHV1UxS29VQk1VQW1ZOGcuVHFIZWkQrI0B
                  
                   vault version
-                  vault login  hvs.CAESIFOpEzkJuE-RQuQOjlolVbCJBPIIo7_EkCJqJGBW_htHGigKImh2cy42UExEZVA0NEZHV1UxS29VQk1VQW1ZOGcuVHFIZWkQrI0B
+                  vault login hvs.CAESIFOpEzkJuE-RQuQOjlolVbCJBPIIo7_EkCJqJGBW_htHGigKImh2cy42UExEZVA0NEZHV1UxS29VQk1VQW1ZOGcuVHFIZWkQrI0B
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
-                  #vault namespace create training
-                  vault policy write train-admin - << EOF
-
-                    path "${ns//\/}/" { 
-                    capabilities = [ "read", "create", "update", "delete", "sudo", "list" ] 
-                    }
-
-                    path "${ns//\/}/secret/data/*" {
-                    capabilities = ["deny"]
-                    }
-
-                    path "${ns//\/}/secret/metadata"
-
-                    {
-                   capabilities = [ "deny"]
-                    }
-
-                   EOF
-                 
-                  #echo "path "sys/namespaces/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" > edu-admin.hcl
-                  #echo "path "sys/policies/acl/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
-                  #echo "path "sys/mounts/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
-                  #echo "path "sys/mounts" {capabilities = [ "read" ]}" >> edu-admin.hcl
-                  #echo "path "identity/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
-                  #echo "path "auth/token/*" {capabilities = ["create", "read", "update", "delete", "list", "sudo"]}" >> edu-admin.hcl
-                  #echo "path "edu-secret/*" {capabilities = ["create", "read", "update", "delete", "list"]}" >> edu-admin.hcl
-                  export VAULT_NAMESPACE=admin/training
-                  vault policy write -namespace=admin/training train-admin train-admin.hcl
-                  export VAULT_NAMESPACE=admin/training
-                  echo "success"
-                  #vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
-                  vault write cubbyhole/jfrog-cred username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
-                  #vault read cubbyhole/myval
+                  #vault write cubbyhole/jfrog-cred1 username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
                   
                   echo "print vault secrets"
                   
-                  mytoken=$(vault read cubbyhole/jfrog-cred | grep username | awk '{ print $2; }')
-                  #echo "$mytoken"
+                  myval=$(vault read cubbyhole/jfrog-cred1 | grep username | awk '{ print $2; }')
+                  echo "$myval"
                   
-                  myvalue=$(vault read cubbyhole/jfrog-cred | grep password | awk '{ print $2; }')
-                  #echo "$myvalue"
-                  
-                  
-                  
-            
+                  mypass=$(vault read cubbyhole/jfrog-cred1 | grep password | awk '{ print $2; }')
+                  echo "$mypass"
+
+
+
+
+
+
+
+
+
+
+
