@@ -39,8 +39,8 @@ jobs:
                   echo "success"
                   #vault kv put -mount=kv testjfrog username=cloudzenix.com password=Prasad url=https://cloudzenix.jfrog.io/
                   #vault write cubbyhole/myval my-token=s3cr3t88 my-value=asdffEE
-                  vault read cubbyhole/myval
-                  
+                  #vault read cubbyhole/myval
+                  echo "valt var"
                   mytoken=$(vault read cubbyhole/myval | grep my-token)
                   echo "$mytoken"
                   
@@ -49,41 +49,4 @@ jobs:
                   
                   
                   
-              #    mkdir -p ~/.aws
-              #    touch ~/.aws/credentials
-              #    echo "[default]
-       
-               #   my-token_id = ${{ env.my-token }} 
-               #   my-value_id = ${{ env.my-value  }}
-                #  region = us-east-1"
-                 # aws --version
-                  
-                  
-                         
-          
-           # - name: Import Secrets
-            #  uses: hashicorp/vault-action@v2
-            #  with:
-            #    url: https://vault-cluster-public-vault-576b5917.b038600b.z1.hashicorp.cloud:8200/
-               # token: ${{ secrets.TFCVAULT }}
-             #   token: hvs.CAESIGXkbE0hZJK53S4AADgG82ZTtByDRJbsOOhUUIpBaxEwGicKImh2cy5pY1VUbDhZeTlmd1A2UWs1c0tFa05OaG4uVHFIZWkQ-Hw
-                #caCertificate: ${{ secrets.VAULT_CA_CERT_HCP }}
-             #   namespace: admin/education/
-             #   exportToken: true
-             #   secrets: |
-                  
-              #      /cubbyhole/myval my-token | MY-TOKEN ;
-              #      /cubbyhole/myval my-value | MY-VALUE
-                    
-           # - name: Unit Test
-            #  run: |
-            #      mkdir -p ~/.aws
-             #     touch ~/.aws/credentials
-              #    echo "[default]
-               #   #username_id = ${{ env.USERNAME}} 
-               #   #password_id = ${{ env.PASSWORD  }}
-               #   my-token_id = ${{ env.MY-TOKEN }} 
-               #   my-value_id = ${{ env.MY-VALUE  }}
-               #   region = us-east-1"
-               #   aws --version     
-           
+            
