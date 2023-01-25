@@ -48,7 +48,7 @@ jobs:
                 url: https://vault-cluster-public-vault-576b5917.b038600b.z1.hashicorp.cloud:8200/
                # token: ${{ secrets.TFCVAULT }}
                 token: hvs.CAESIGXkbE0hZJK53S4AADgG82ZTtByDRJbsOOhUUIpBaxEwGicKImh2cy5pY1VUbDhZeTlmd1A2UWs1c0tFa05OaG4uVHFIZWkQ-Hw
-                #caCertificate: ${{ secrets.VAULT_CA_CERT_HCP }}
+                caCertificate: ${{ secrets.VAULT_CA_CERT_HCP }}
                 namespace: admin/education/
                 exportToken: true
                 secrets: |
