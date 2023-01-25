@@ -24,7 +24,7 @@ jobs:
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
                   #vault namespace create training
-                  vault policy write my-policy-$ns - << EOF
+                  vault policy write train-admin - << EOF
 
                     path "${ns//\/}/" { 
                     capabilities = [ "read", "create", "update", "delete", "sudo", "list" ] 
