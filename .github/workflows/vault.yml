@@ -16,7 +16,7 @@ jobs:
                   sudo apt install vault
                   sudo systemctl start vault.service
                   sudo systemctl status vault.service
-                  export VAULT_ADDR=https://vault.cloudzenix.ne
+                  export VAULT_ADDR=https://vault.cloudzenix.net
                   export VAULT_TOKEN=hvs.eETzcvWCkNIzZcSU8jVnhqtW
                  
                   vault version
