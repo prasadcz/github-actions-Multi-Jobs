@@ -23,15 +23,23 @@ jobs:
                   vault login hvs.CAESIFOpEzkJuE-RQuQOjlolVbCJBPIIo7_EkCJqJGBW_htHGigKImh2cy42UExEZVA0NEZHV1UxS29VQk1VQW1ZOGcuVHFIZWkQrI0B
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
-                  vault write cubbyhole/jfrog-cred1 username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
-                  
-                  echo "print vault secrets"
-                  
-                  myval=$(vault read cubbyhole/jfrog-cred1 | grep username | awk '{ print $2; }')
+                  vault kv put -mount=kv creds-1 username=my-long-passcode password=123456
+                  #retrive vaule from vault (kv engine) 
+                  vault kv get -mount=kv creds-1
+                  myval=$(vault kv get -mount=kv creds-1 | grep username | awk '{ print $2; }')
                   echo "$myval"
                   
-                  mypass=$(vault read cubbyhole/jfrog-cred1 | grep password | awk '{ print $2; }')
+                  mypass=$(vault kv get -mount=kv creds-1 | grep password | awk '{ print $2; }')
                   echo "$mypass"
+                  #vault write cubbyhole/jfrog-cred1 username=renuka.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
+                  
+                  #echo "print vault secrets"
+                  
+                  #myval=$(vault read cubbyhole/jfrog-cred1 | grep username | awk '{ print $2; }')
+                  #echo "$myval"
+                  
+                  #mypass=$(vault read cubbyhole/jfrog-cred1 | grep password | awk '{ print $2; }')
+                  #echo "$mypass"
 
 
 
