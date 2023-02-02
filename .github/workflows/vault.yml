@@ -24,13 +24,13 @@ jobs:
                   export VAULT_NAMESPACE=admin
                   echo "vault login success"
                   
-                  vault kv put -mount=kv creds username=my-long-passcode password=123456
+                  vault kv put -mount=kv creds-demo username=my-long-passcode password=123456
                   #retrive vaule from vault (kv engine) 
-                  vault kv get -mount=kv creds
-                  myval=$(vault kv get -mount=kv creds | grep username | awk '{ print $2; }')
+                  vault kv get -mount=kv creds-demo
+                  myval=$(vault kv get -mount=kv creds-demo | grep username | awk '{ print $2; }')
                   echo "$myval"
                   
-                  mypass=$(vault kv get -mount=kv creds | grep password | awk '{ print $2; }')
+                  mypass=$(vault kv get -mount=kv cred-demos | grep password | awk '{ print $2; }')
                   echo "$mypass"
                  # vault write cubbyhole/jfrog1-cred1 username=renuka1.prasad@cloudzenix.com password=Prasad@123 URL=https://cloudzenix.jfrog.io/
                   
