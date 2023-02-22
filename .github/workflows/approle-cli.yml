@@ -1,0 +1,29 @@
+name: vault-cli
+
+on:
+  push:
+    branches: [ master ] 
+
+
+jobs:
+    build:
+         runs-on: ubuntu-latest 
+         steps:
+            - name: VAULT COMMAND
+              run: |
+                  curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+                  sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
+                  sudo apt install vault
+                  sudo systemctl start vault.service
+                  sudo systemctl status vault.service
+                  export VAULT_ADDR=http://54.91.245.169:8200/
+                  export VAULT_TOKEN=hvs.CAESIEIsGHauQ1QAwXlkZdO5llsDJWnI2EM8v6r_aSIiN9u5Gh4KHGh2cy5saVFQNzVVZ1hVZ003dndBNTg0Z0U2QzU
+                 
+                  vault version
+                  vault login hvs.CAESIEIsGHauQ1QAwXlkZdO5llsDJWnI2EM8v6r_aSIiN9u5Gh4KHGh2cy5saVFQNzVVZ1hVZ003dndBNTg0Z0U2QzU
+                  #export VAULT_NAMESPACE=admin
+                  echo "vault login success"
+                  vault write auth/approle/login role_id="993850a1-ac07-676a-8746-3178b3fe83c6" secret_id="40cc4891-d0c2-9f10-cb15-0facf97df09b"
+                  VAULT_TOKEN=hvs.CAESILuYcKWz6hH8199raz0hVmmlZ7996V7STY6OpZ0FB1p-Gh4KHGh2cy44d3YyU1daWTlyVVVrSFE2UkRMZVo0dWo vault kv get secret/mysql/webapp
+                  
+                 
