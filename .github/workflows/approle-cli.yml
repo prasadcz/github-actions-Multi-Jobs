@@ -27,6 +27,6 @@ jobs:
                   echo "$myuser"
                   mypass=$(vault kv get secret/mysql/webapp | grep password | awk '{ print $2; }')
                   mydb=$(vault kv get secret/mysql/webapp | grep db-name | awk '{ print $2; }')
-                  echo "$myval"
+                  echo "$mydb"
                
                  
