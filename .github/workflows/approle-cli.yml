@@ -26,6 +26,9 @@ jobs:
                   #vault write auth/approle/login role_id="993850a1-ac07-676a-8746-3178b3fe83c6" secret_id="40cc4891-d0c2-9f10-cb15-0facf97df09b"
                   VAULT_TOKEN=hvs.CAESILuYcKWz6hH8199raz0hVmmlZ7996V7STY6OpZ0FB1p-Gh4KHGh2cy44d3YyU1daWTlyVVVrSFE2UkRMZVo0dWo  vault kv get secret/mysql/webapp
 
+              
+                  myval=$(VAULT_TOKEN=hvs.CAESILuYcKWz6hH8199raz0hVmmlZ7996V7STY6OpZ0FB1p-Gh4KHGh2cy44d3YyU1daWTlyVVVrSFE2UkRMZVo0dWo  vault kv get secret/mysql/webapp | grep username | awk '{ print $2; }')
+                  echo "$myval"  
                   
                   #vault  secrets list
                   echo "success"
