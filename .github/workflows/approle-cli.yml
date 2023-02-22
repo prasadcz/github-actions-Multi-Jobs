@@ -17,10 +17,10 @@ jobs:
                   sudo systemctl start vault.service
                   sudo systemctl status vault.service
                   export VAULT_ADDR=http://54.91.245.169:8200/
-                  export VAULT_TOKEN= ${{ secrets.APPROLEVAULT}}
+                  #export VAULT_TOKEN= ${{ secrets.APPROLEVAULT}}
                  
                   vault version
-                  #vault login hvs.CAESIEIsGHauQ1QAwXlkZdO5llsDJWnI2EM8v6r_aSIiN9u5Gh4KHGh2cy5saVFQNzVVZ1hVZ003dndBNTg0Z0U2QzU
+                  vault login ${{ secrets.APPROLEVAULT}}
                
                   echo "vault login success"
                  
