@@ -20,16 +20,17 @@ jobs:
                 method: approle
                 roleId: ${{ secrets.VAULT_ROLE_ID }}
                 secretId: ${{ secrets.VAULT_SECRET_ID }}
-                #secrets: | 
-                #    /cubbyhole/jfrog-cred username | USERNAME ;
-                #   /cubbyhole/jfrog-cred password | PASSWORD
-                   
-            #- name: Unit Test
-            #  run: |
-            #      mkdir -p ~/.aws
-            #      touch ~/.aws/credentials
-            #      echo "[default]
-            #      username_id = ${{ env.USERNAME }} 
-            #      password_id = ${{ env.PASSWORD }}
-            #      region = us-east-1"
-            #      aws --version  
+                secrets: | 
+                    secret/mysql/webapp username | USERNAME ;
+                    secret/mysql/webapp password | PASSWORD ;
+                    secret/mysql/webapp db-name | DBNAME 
+            - name: Unit Test
+              run: |
+                  mkdir -p ~/.aws
+                  touch ~/.aws/credentials
+                  echo "[default]
+                  username_id = ${{ env.USERNAME }} 
+                  password_id = ${{ env.PASSWORD }}
+                  dbname_id = ${{ env.DBNAME }}
+                  region = us-east-1"
+                  aws --version  
